@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — PDFyre</title>
+<meta name="description" content="About PDFyre — free browser-based PDF tools. OCR, Merge, Split, Compress. Built for privacy. No uploads ever.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<!-- Google AdSense — replace ca-pub-XXXXXXXXXXXXXXXX — uncomment after approval -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+<style>
+:root{
+  --bg:#07080d;--surface:#0d0f18;--card:#131520;--card-hi:#1a1d2e;
+  --border:#1e2133;--border-hi:#2e3350;
+  --fire:#ff6b1f;--fire-2:#ff8c42;--fire-dim:#c24c10;
+  --fire-glow:rgba(255,107,31,.13);
+  --teal:#38d9c0;--green:#3dd68c;--blue:#5b9cf6;
+  --text:#e4e6f0;--text-2:#8890b8;--text-3:#4a5070;
+  --font:'DM Sans',sans-serif;--mono:'DM Mono',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:
+    radial-gradient(circle at 80% 20%,rgba(255,107,31,.05) 0%,transparent 50%),
+    linear-gradient(var(--border) 1px,transparent 1px),
+    linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:auto,48px 48px,48px 48px;opacity:.45;pointer-events:none;z-index:0;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 24px;border-bottom:1px solid var(--border);
+  background:rgba(7,8,13,.88);backdrop-filter:blur(20px);
+  position:sticky;top:0;z-index:100;
+}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:1.05rem;letter-spacing:-.03em;text-decoration:none;color:var(--text)}
+.logo-icon{width:28px;height:28px;background:linear-gradient(145deg,#ff8c42,#ff6b1f,#c24c10);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 2px 10px rgba(255,107,31,.35)}
+.logo-wordmark{letter-spacing:-.045em}
+.logo-wordmark .yre{color:#ff8c42}
+nav{display:flex;gap:6px}
+.nav-link{font-size:.8rem;color:var(--text-2);padding:5px 11px;border-radius:6px;text-decoration:none;transition:all .13s}
+.nav-link:hover{color:var(--text);background:var(--card)}
+main{padding:52px 0 80px}
+h1{font-size:2.2rem;font-weight:800;letter-spacing:-.05em;margin-bottom:10px;line-height:1.1}
+h1 em{font-style:normal;background:linear-gradient(90deg,#ff8c42,#38d9c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.lead{font-size:.97rem;color:var(--text-2);line-height:1.75;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--border);max-width:580px}
+h2{font-size:1.05rem;font-weight:700;margin:36px 0 12px}
+p{font-size:.87rem;color:var(--text-2);line-height:1.8;margin-bottom:12px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:16px 0 32px}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;transition:border-color .15s}
+.info-card:hover{border-color:var(--border-hi)}
+.info-card-icon{font-size:1.5rem;margin-bottom:10px}
+.info-card h3{font-size:.88rem;font-weight:700;margin-bottom:6px}
+.info-card p{font-size:.78rem;color:var(--text-2);line-height:1.6;margin-bottom:0}
+.tech-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:14px 0}
+.tech-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:9px;padding:14px 16px;
+  display:flex;align-items:flex-start;gap:11px;
+}
+.tech-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+.tech-name{font-size:.83rem;font-weight:700;margin-bottom:3px}
+.tech-desc{font-size:.74rem;color:var(--text-2);line-height:1.5}
+.cta-box{
+  background:linear-gradient(135deg,var(--fire-glow),rgba(56,217,192,.06));
+  border:1px solid rgba(255,107,31,.22);
+  border-radius:12px;padding:28px;text-align:center;margin-top:40px;
+}
+.cta-box h2{margin-top:0;margin-bottom:10px;font-size:1.15rem}
+.cta-box p{font-size:.85rem;color:var(--text-2);margin-bottom:18px}
+.btn-fire{
+  display:inline-flex;align-items:center;gap:7px;
+  background:linear-gradient(135deg,#ff8c42,#ff6b1f,#c24c10);
+  color:#fff;font-weight:700;font-size:.88rem;
+  padding:11px 24px;border-radius:8px;text-decoration:none;
+  box-shadow:0 2px 12px rgba(255,107,31,.3);
+  transition:all .16s;
+}
+.btn-fire:hover{transform:translateY(-1px);box-shadow:0 5px 22px rgba(255,107,31,.42)}
+footer{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:.74rem;color:var(--text-3)}
+footer a{color:var(--text-3);text-decoration:none;margin:0 8px}
+footer a:hover{color:var(--text-2)}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:var(--border-hi);border-radius:2px}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">🔥</div>
+    <span class="logo-wordmark">PDF<span class="yre">yre</span></span>
+  </a>
+  <nav>
+    <a href="index.html" class="nav-link">← All Tools</a>
+    <a href="privacy.html" class="nav-link">Privacy</a>
+    <a href="terms.html" class="nav-link">Terms</a>
+  </nav>
+</header>
+
+<div class="wrap">
+<main>
+  <h1>Built for people who<br><em>value their privacy</em></h1>
+  <p class="lead">PDFyre is a free, browser-based PDF tool suite. Every single tool — OCR, Merge, Split, Compress — runs entirely inside your browser. Your files never leave your device. Not even for a millisecond.</p>
+
+  <h2>Why PDFyre Exists</h2>
+  <p>Most online PDF tools upload your documents to remote servers. This is a problem. PDFs often contain sensitive information — medical records, legal documents, academic papers, financial statements, personal IDs. Uploading them to an unknown server means trusting a stranger with your data.</p>
+  <p>PDFyre was built on a simple principle: <strong>your files are yours.</strong> All processing happens on your own CPU, in your own browser, with no network requests containing your data.</p>
+
+  <h2>What PDFyre Can Do</h2>
+  <div class="card-grid">
+    <div class="info-card">
+      <div class="info-card-icon">🔥</div>
+      <h3>OCR PDF</h3>
+      <p>Make scanned PDFs searchable and copy-pasteable. Word-level text alignment. 100+ languages. 5 quality modes.</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">🔀</div>
+      <h3>Merge PDF</h3>
+      <p>Combine multiple PDFs into one. Original quality preserved. No file size limits. No watermarks.</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">✂️</div>
+      <h3>Split PDF</h3>
+      <p>Extract page ranges into separate files. Define multiple ranges. Name each output file.</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">📦</div>
+      <h3>Compress PDF</h3>
+      <p>Reduce file size with 3 compression levels. Best for scanned and image-heavy PDFs.</p>
+    </div>
+  </div>
+
+  <h2>Built With</h2>
+  <div class="tech-row">
+    <div class="tech-card">
+      <div class="tech-icon">📄</div>
+      <div>
+        <div class="tech-name">PDF.js</div>
+        <div class="tech-desc">Mozilla's PDF renderer. Renders PDF pages to canvas in-browser.</div>
+      </div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🔍</div>
+      <div>
+        <div class="tech-name">Tesseract.js</div>
+        <div class="tech-desc">Browser port of the Tesseract OCR engine. Supports 100+ languages via LSTM neural networks.</div>
+      </div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🛠️</div>
+      <div>
+        <div class="tech-name">pdf-lib</div>
+        <div class="tech-desc">JavaScript PDF creation and modification library. Builds the output PDF with embedded text layers.</div>
+      </div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🗄️</div>
+      <div>
+        <div class="tech-name">IndexedDB</div>
+        <div class="tech-desc">Browser-native storage for buffering large file processing without RAM crashes.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Our Promises</h2>
+  <p>✅ &nbsp;PDFyre will always be free to use<br>
+     ✅ &nbsp;No account will ever be required<br>
+     ✅ &nbsp;No files will ever be uploaded to any server<br>
+     ✅ &nbsp;No watermarks will ever be added to output files<br>
+     ✅ &nbsp;No user data will ever be sold<br>
+     ✅ &nbsp;The core tools will never be paywalled</p>
+
+  <h2>Contact</h2>
+  <p>Questions, feedback, or bug reports: <a href="mailto:wisemindsviral@gmail.com" style="color:var(--fire-2)">wisemindsviral@gmail.com</a></p>
+
+  <div class="cta-box">
+    <h2>Start Using PDFyre</h2>
+    <p>Free. No account. No uploads. Works right now in your browser.</p>
+    <a href="index.html" class="btn-fire">🔥 Open PDFyre Tools</a>
+  </div>
+</main>
+</div>
+
+<footer>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="mailto:wisemindsviral@gmail.com">Contact</a>
+  </div>
+  <div style="margin-top:8px">© 2025 PDFyre · Free forever · Zero uploads · Zero tracking</div>
+</footer>
+
+</body>
+</html>
