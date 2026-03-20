@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
@@ -83,27 +84,27 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  font-family:var(--font);
-  background:var(--bg);
-  color:var(--text);
-  min-height:100vh;
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-  transition:background .2s,color .2s;
+font-family:var(–font);
+background:var(–bg);
+color:var(–text);
+min-height:100vh;
+overflow-x:hidden;
+-webkit-font-smoothing:antialiased;
+transition:background .2s,color .2s;
 }
-[data-theme="dark"] body::before{
-  content:'';position:fixed;inset:0;
-  background-image:
-    radial-gradient(circle at 20% 10%,rgba(255,107,31,.05) 0%,transparent 50%),
-    radial-gradient(circle at 80% 85%,rgba(56,217,192,.04) 0%,transparent 50%),
-    linear-gradient(var(--border) 1px,transparent 1px),
-    linear-gradient(90deg,var(--border) 1px,transparent 1px);
-  background-size:auto,auto,48px 48px,48px 48px;
-  opacity:.55;pointer-events:none;z-index:0;
+[data-theme=“dark”] body::before{
+content:’’;position:fixed;inset:0;
+background-image:
+radial-gradient(circle at 20% 10%,rgba(255,107,31,.05) 0%,transparent 50%),
+radial-gradient(circle at 80% 85%,rgba(56,217,192,.04) 0%,transparent 50%),
+linear-gradient(var(–border) 1px,transparent 1px),
+linear-gradient(90deg,var(–border) 1px,transparent 1px);
+background-size:auto,auto,48px 48px,48px 48px;
+opacity:.55;pointer-events:none;z-index:0;
 }
 ::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:var(--border-hi);border-radius:2px}
+::-webkit-scrollbar-thumb{background:var(–border-hi);border-radius:2px}
 #app{position:relative;z-index:1}
 .screen{min-height:100vh;display:none;flex-direction:column}
 .screen.active{display:flex;animation:fadeUp .25s ease}
@@ -111,206 +112,206 @@ body{
 
 /* ── HEADER ── */
 .hdr{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 20px;height:var(--hdr-h);
-  border-bottom:1px solid var(--border);
-  background:rgba(7,8,13,.88);
-  backdrop-filter:blur(20px);
-  position:sticky;top:0;z-index:200;flex-shrink:0;
-  transition:background .2s;
-  gap:8px;
+display:flex;align-items:center;justify-content:space-between;
+padding:0 20px;height:var(–hdr-h);
+border-bottom:1px solid var(–border);
+background:rgba(7,8,13,.88);
+backdrop-filter:blur(20px);
+position:sticky;top:0;z-index:200;flex-shrink:0;
+transition:background .2s;
+gap:8px;
 }
 @media(max-width:400px){.hdr{padding:0 12px}}
-[data-theme="light"] .hdr{background:rgba(240,242,248,.92)}
+[data-theme=“light”] .hdr{background:rgba(240,242,248,.92)}
 .logo{
-  display:flex;align-items:center;gap:9px;
-  font-weight:800;font-size:1.1rem;
-  text-decoration:none;color:var(--text);
-  letter-spacing:0;flex-shrink:0;
-  cursor:pointer;
-  -webkit-tap-highlight-color:transparent;
+display:flex;align-items:center;gap:9px;
+font-weight:800;font-size:1.1rem;
+text-decoration:none;color:var(–text);
+letter-spacing:0;flex-shrink:0;
+cursor:pointer;
+-webkit-tap-highlight-color:transparent;
 }
 .logo-icon{
-  width:30px;height:30px;
-  background:linear-gradient(145deg,var(--fire-2),var(--fire),var(--fire-dim));
-  border-radius:7px;display:flex;align-items:center;justify-content:center;
-  font-size:15px;flex-shrink:0;
-  box-shadow:0 2px 10px rgba(255,107,31,.35);
+width:30px;height:30px;
+background:linear-gradient(145deg,var(–fire-2),var(–fire),var(–fire-dim));
+border-radius:7px;display:flex;align-items:center;justify-content:center;
+font-size:15px;flex-shrink:0;
+box-shadow:0 2px 10px rgba(255,107,31,.35);
 }
 /* PDFyre as one tight word — no gap between PDF and yre */
 .logo-wordmark{
-  display:inline-block;
-  letter-spacing:-.045em;
-  line-height:1;
-  white-space:nowrap;
+display:inline-block;
+letter-spacing:-.045em;
+line-height:1;
+white-space:nowrap;
 }
-.logo-wordmark .yre{color:var(--fire-2)}
+.logo-wordmark .yre{color:var(–fire-2)}
 @media(max-width:380px){
-  .logo-wordmark{font-size:.9rem}
-  .logo{gap:6px}
+.logo-wordmark{font-size:.9rem}
+.logo{gap:6px}
 }
 .hdr-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
 /* Shorten back button text on small screens */
 .btn-back-text{display:inline}
 .btn-back-short{display:none}
 @media(max-width:400px){
-  .btn-back-text{display:none}
-  .btn-back-short{display:inline}
+.btn-back-text{display:none}
+.btn-back-short{display:inline}
 }
 
 /* theme toggle */
 .theme-btn{
-  width:34px;height:34px;border-radius:8px;
-  background:var(--card);border:1px solid var(--border);
-  cursor:pointer;display:flex;align-items:center;justify-content:center;
-  font-size:15px;transition:all .15s;
+width:34px;height:34px;border-radius:8px;
+background:var(–card);border:1px solid var(–border);
+cursor:pointer;display:flex;align-items:center;justify-content:center;
+font-size:15px;transition:all .15s;
 }
-.theme-btn:hover{border-color:var(--border-hi);background:var(--card-hi)}
+.theme-btn:hover{border-color:var(–border-hi);background:var(–card-hi)}
 .hdr-nav{display:flex;align-items:center;gap:4px}
 .nav-link{
-  font-size:.82rem;font-weight:500;color:var(--text-2);
-  padding:6px 12px;border-radius:6px;cursor:pointer;
-  text-decoration:none;transition:all .13s;
+font-size:.82rem;font-weight:500;color:var(–text-2);
+padding:6px 12px;border-radius:6px;cursor:pointer;
+text-decoration:none;transition:all .13s;
 }
-.nav-link:hover,.nav-link.active{color:var(--text);background:var(--card)}
+.nav-link:hover,.nav-link.active{color:var(–text);background:var(–card)}
 
 /* ── BADGES ── */
 .badge{
-  font-family:var(--mono);font-size:.59rem;
-  padding:3px 7px;border-radius:4px;
-  letter-spacing:.07em;text-transform:uppercase;
-  display:inline-flex;align-items:center;gap:3px;flex-shrink:0;
+font-family:var(–mono);font-size:.59rem;
+padding:3px 7px;border-radius:4px;
+letter-spacing:.07em;text-transform:uppercase;
+display:inline-flex;align-items:center;gap:3px;flex-shrink:0;
 }
-.badge-fire{background:var(--fire-glow);color:var(--fire-2);border:1px solid rgba(255,107,31,.22)}
-.badge-t   {background:var(--teal-glow);color:var(--teal);border:1px solid rgba(56,217,192,.22)}
-.badge-g   {background:var(--green-glow);color:var(--green);border:1px solid rgba(61,214,140,.22)}
-.badge-r   {background:var(--red-glow);color:var(--red);border:1px solid rgba(244,107,107,.22)}
-.badge-b   {background:var(--blue-glow);color:var(--blue);border:1px solid rgba(91,156,246,.22)}
-.badge-v   {background:rgba(167,139,250,.1);color:var(--violet);border:1px solid rgba(167,139,250,.22)}
-.badge-warn{background:rgba(245,158,11,.1);color:var(--amber);border:1px solid rgba(245,158,11,.22)}
-.badge-new {background:linear-gradient(90deg,rgba(255,107,31,.2),rgba(255,140,66,.1));color:var(--fire-2);border:1px solid rgba(255,107,31,.3)}
+.badge-fire{background:var(–fire-glow);color:var(–fire-2);border:1px solid rgba(255,107,31,.22)}
+.badge-t   {background:var(–teal-glow);color:var(–teal);border:1px solid rgba(56,217,192,.22)}
+.badge-g   {background:var(–green-glow);color:var(–green);border:1px solid rgba(61,214,140,.22)}
+.badge-r   {background:var(–red-glow);color:var(–red);border:1px solid rgba(244,107,107,.22)}
+.badge-b   {background:var(–blue-glow);color:var(–blue);border:1px solid rgba(91,156,246,.22)}
+.badge-v   {background:rgba(167,139,250,.1);color:var(–violet);border:1px solid rgba(167,139,250,.22)}
+.badge-warn{background:rgba(245,158,11,.1);color:var(–amber);border:1px solid rgba(245,158,11,.22)}
+.badge-new {background:linear-gradient(90deg,rgba(255,107,31,.2),rgba(255,140,66,.1));color:var(–fire-2);border:1px solid rgba(255,107,31,.3)}
 
 /* ── BUTTONS ── */
 .btn{
-  font-family:var(--font);font-size:.87rem;font-weight:600;
-  padding:10px 20px;border-radius:var(--r-sm);border:none;
-  cursor:pointer;transition:all .16s ease;
-  display:inline-flex;align-items:center;gap:7px;
+font-family:var(–font);font-size:.87rem;font-weight:600;
+padding:10px 20px;border-radius:var(–r-sm);border:none;
+cursor:pointer;transition:all .16s ease;
+display:inline-flex;align-items:center;gap:7px;
 }
 .btn:disabled{opacity:.4;cursor:not-allowed;pointer-events:none}
 .btn-fire{
-  background:linear-gradient(135deg,var(--fire-2),var(--fire),var(--fire-dim));
-  color:#fff;font-weight:700;
-  box-shadow:0 2px 12px rgba(255,107,31,.28);
+background:linear-gradient(135deg,var(–fire-2),var(–fire),var(–fire-dim));
+color:#fff;font-weight:700;
+box-shadow:0 2px 12px rgba(255,107,31,.28);
 }
 .btn-fire:hover{transform:translateY(-1px);box-shadow:0 5px 22px rgba(255,107,31,.42)}
-.btn-secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
-.btn-secondary:hover{border-color:var(--border-hi);background:var(--card-hi)}
-.btn-ghost{background:transparent;color:var(--text-2);border:1px solid transparent}
-.btn-ghost:hover{color:var(--text);border-color:var(--border)}
-.btn-danger{background:var(--red-glow);color:var(--red);border:1px solid rgba(244,107,107,.28)}
+.btn-secondary{background:var(–card);color:var(–text);border:1px solid var(–border)}
+.btn-secondary:hover{border-color:var(–border-hi);background:var(–card-hi)}
+.btn-ghost{background:transparent;color:var(–text-2);border:1px solid transparent}
+.btn-ghost:hover{color:var(–text);border-color:var(–border)}
+.btn-danger{background:var(–red-glow);color:var(–red);border:1px solid rgba(244,107,107,.28)}
 .btn-danger:hover{background:rgba(244,107,107,.18)}
-.btn-blue{background:var(--blue-glow);color:var(--blue);border:1px solid rgba(91,156,246,.28)}
+.btn-blue{background:var(–blue-glow);color:var(–blue);border:1px solid rgba(91,156,246,.28)}
 .btn-blue:hover{background:rgba(91,156,246,.18)}
 .btn-lg{padding:13px 26px;font-size:.93rem}
-.btn-xl{width:100%;padding:14px;font-size:.95rem;justify-content:center;border-radius:var(--r)}
+.btn-xl{width:100%;padding:14px;font-size:.95rem;justify-content:center;border-radius:var(–r)}
 
 .sec-lbl{
-  font-family:var(--mono);font-size:.6rem;
-  letter-spacing:.13em;text-transform:uppercase;
-  color:var(--text-3);margin-bottom:10px;
+font-family:var(–mono);font-size:.6rem;
+letter-spacing:.13em;text-transform:uppercase;
+color:var(–text-3);margin-bottom:10px;
 }
-.divider{height:1px;background:var(--border);margin:20px 0}
+.divider{height:1px;background:var(–border);margin:20px 0}
 
 /* ═══════════════════════════════════════
-   LOADING
+LOADING
 ═══════════════════════════════════════ */
 #lib-overlay{
-  position:fixed;inset:0;background:var(--bg);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:14px;z-index:9999;
+position:fixed;inset:0;background:var(–bg);
+display:flex;flex-direction:column;align-items:center;justify-content:center;
+gap:14px;z-index:9999;
 }
 .init-ring{
-  width:34px;height:34px;
-  border:2.5px solid var(--border-hi);
-  border-top-color:var(--fire);
-  border-radius:50%;animation:spin .65s linear infinite;
+width:34px;height:34px;
+border:2.5px solid var(–border-hi);
+border-top-color:var(–fire);
+border-radius:50%;animation:spin .65s linear infinite;
 }
 @keyframes spin{to{transform:rotate(360deg)}}
-#lib-msg{font-family:var(--mono);font-size:.73rem;color:var(--text-3)}
+#lib-msg{font-family:var(–mono);font-size:.73rem;color:var(–text-3)}
 
 /* ═══════════════════════════════════════
-   HOME SCREEN — ilovepdf style
+HOME SCREEN — ilovepdf style
 ═══════════════════════════════════════ */
 .home-body{
-  flex:1;max-width:1100px;margin:0 auto;
-  width:100%;padding:52px 24px 64px;
+flex:1;max-width:1100px;margin:0 auto;
+width:100%;padding:52px 24px 64px;
 }
 .home-hero{text-align:center;margin-bottom:52px}
 .home-hero h1{
-  font-size:clamp(1.9rem,4.5vw,3rem);
-  font-weight:800;letter-spacing:-.04em;line-height:1.1;margin-bottom:14px;
+font-size:clamp(1.9rem,4.5vw,3rem);
+font-weight:800;letter-spacing:-.04em;line-height:1.1;margin-bottom:14px;
 }
 .home-hero h1 em{
-  font-style:normal;
-  background:linear-gradient(90deg,var(--fire-2),var(--teal));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+font-style:normal;
+background:linear-gradient(90deg,var(–fire-2),var(–teal));
+-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
-.home-hero p{color:var(--text-2);font-size:.97rem;line-height:1.65;max-width:540px;margin:0 auto}
+.home-hero p{color:var(–text-2);font-size:.97rem;line-height:1.65;max-width:540px;margin:0 auto}
 
 /* Featured OCR tool */
 .featured-tool{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:16px;padding:28px 32px;
-  display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
-  margin-bottom:20px;cursor:pointer;transition:all .2s ease;
-  position:relative;overflow:hidden;
+background:var(–card);border:1px solid var(–border);
+border-radius:16px;padding:28px 32px;
+display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
+margin-bottom:20px;cursor:pointer;transition:all .2s ease;
+position:relative;overflow:hidden;
 }
 .featured-tool::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at 0% 50%,var(--fire-glow),transparent 60%);
-  opacity:0;transition:opacity .25s;
+content:’’;position:absolute;inset:0;
+background:radial-gradient(ellipse at 0% 50%,var(–fire-glow),transparent 60%);
+opacity:0;transition:opacity .25s;
 }
-.featured-tool:hover{border-color:rgba(255,107,31,.4);box-shadow:0 4px 32px var(--fire-glow)}
+.featured-tool:hover{border-color:rgba(255,107,31,.4);box-shadow:0 4px 32px var(–fire-glow)}
 .featured-tool:hover::before{opacity:1}
 .feat-left{display:flex;align-items:center;gap:20px}
 .feat-icon-wrap{
-  width:56px;height:56px;flex-shrink:0;border-radius:13px;
-  background:linear-gradient(145deg,var(--fire-glow),rgba(255,107,31,.08));
-  border:1px solid rgba(255,107,31,.25);
-  display:flex;align-items:center;justify-content:center;font-size:24px;
+width:56px;height:56px;flex-shrink:0;border-radius:13px;
+background:linear-gradient(145deg,var(–fire-glow),rgba(255,107,31,.08));
+border:1px solid rgba(255,107,31,.25);
+display:flex;align-items:center;justify-content:center;font-size:24px;
 }
 .feat-info h2{font-size:1.2rem;font-weight:800;letter-spacing:-.02em;margin-bottom:5px}
-.feat-info p{color:var(--text-2);font-size:.84rem;line-height:1.55;max-width:440px}
+.feat-info p{color:var(–text-2);font-size:.84rem;line-height:1.55;max-width:440px}
 .feat-chips-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
 .feat-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0}
 @media(max-width:640px){
-  .featured-tool{grid-template-columns:1fr}
-  .feat-right{align-items:flex-start}
+.featured-tool{grid-template-columns:1fr}
+.feat-right{align-items:flex-start}
 }
 
 /* Tool grid */
 .tools-section-lbl{
-  font-family:var(--mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
-  color:var(--text-3);margin-bottom:14px;
+font-family:var(–mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+color:var(–text-3);margin-bottom:14px;
 }
 .tool-grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
-  gap:12px;margin-bottom:24px;
+display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+gap:12px;margin-bottom:24px;
 }
 @media(max-width:480px){.tool-grid{grid-template-columns:1fr 1fr}}
 .tool-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:12px;padding:20px 18px;
-  cursor:pointer;transition:all .17s ease;position:relative;
-  display:flex;flex-direction:column;gap:10px;
+background:var(–card);border:1px solid var(–border);
+border-radius:12px;padding:20px 18px;
+cursor:pointer;transition:all .17s ease;position:relative;
+display:flex;flex-direction:column;gap:10px;
 }
-.tool-card:hover{border-color:var(--border-hi);transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.3)}
+.tool-card:hover{border-color:var(–border-hi);transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.3)}
 .tool-card.soon{cursor:default;opacity:.7}
-.tool-card.soon:hover{transform:none;box-shadow:none;border-color:var(--border)}
+.tool-card.soon:hover{transform:none;box-shadow:none;border-color:var(–border)}
 .tool-icon-box{
-  width:42px;height:42px;border-radius:10px;
-  display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;
+width:42px;height:42px;border-radius:10px;
+display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;
 }
 .ti-blue  {background:rgba(91,156,246,.12);border:1px solid rgba(91,156,246,.22)}
 .ti-green {background:rgba(61,214,140,.1); border:1px solid rgba(61,214,140,.2)}
@@ -319,496 +320,496 @@ body{
 .ti-amber {background:rgba(245,158,11,.1); border:1px solid rgba(245,158,11,.2)}
 .ti-red   {background:rgba(244,107,107,.1);border:1px solid rgba(244,107,107,.2)}
 .tool-card h3{font-size:.9rem;font-weight:700;letter-spacing:-.01em}
-.tool-card p {font-size:.77rem;color:var(--text-2);line-height:1.45;flex:1}
+.tool-card p {font-size:.77rem;color:var(–text-2);line-height:1.45;flex:1}
 .tool-soon-badge{
-  font-family:var(--mono);font-size:.57rem;padding:2px 7px;border-radius:4px;
-  background:rgba(139,139,158,.1);color:var(--text-3);
-  border:1px solid var(--border);letter-spacing:.06em;text-transform:uppercase;
-  align-self:flex-start;
+font-family:var(–mono);font-size:.57rem;padding:2px 7px;border-radius:4px;
+background:rgba(139,139,158,.1);color:var(–text-3);
+border:1px solid var(–border);letter-spacing:.06em;text-transform:uppercase;
+align-self:flex-start;
 }
 
 .home-footer{
-  text-align:center;font-size:.75rem;color:var(--text-3);
-  padding-top:40px;border-top:1px solid var(--border);margin-top:20px;
+text-align:center;font-size:.75rem;color:var(–text-3);
+padding-top:40px;border-top:1px solid var(–border);margin-top:20px;
 }
 
 /* ═══════════════════════════════════════
-   TOOL HEADER (shared for all tool screens)
+TOOL HEADER (shared for all tool screens)
 ═══════════════════════════════════════ */
 .tool-hdr{
-  padding:18px 28px 16px;border-bottom:1px solid var(--border);
-  flex-shrink:0;
+padding:18px 28px 16px;border-bottom:1px solid var(–border);
+flex-shrink:0;
 }
 .tool-hdr-top{display:flex;align-items:center;gap:12px;margin-bottom:4px}
 .tool-hdr-icon{
-  width:38px;height:38px;border-radius:9px;
-  display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;
+width:38px;height:38px;border-radius:9px;
+display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;
 }
 .tool-hdr h2{font-size:1.1rem;font-weight:800;letter-spacing:-.02em}
-.tool-hdr p{font-size:.81rem;color:var(--text-2);margin-left:50px}
+.tool-hdr p{font-size:.81rem;color:var(–text-2);margin-left:50px}
 
 /* ═══════════════════════════════════════
-   OCR UPLOAD SCREEN
+OCR UPLOAD SCREEN
 ═══════════════════════════════════════ */
 .upload-body{
-  flex:1;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  padding:40px 24px;
+flex:1;display:flex;flex-direction:column;
+align-items:center;justify-content:center;
+padding:40px 24px;
 }
 .drop-zone{
-  width:100%;max-width:500px;
-  border:2px dashed var(--border-hi);
-  border-radius:14px;padding:44px 28px;
-  text-align:center;cursor:pointer;
-  transition:all .2s ease;
-  background:var(--surface);position:relative;overflow:hidden;
-  -webkit-tap-highlight-color:transparent;
-  touch-action:manipulation;
+width:100%;max-width:500px;
+border:2px dashed var(–border-hi);
+border-radius:14px;padding:44px 28px;
+text-align:center;cursor:pointer;
+transition:all .2s ease;
+background:var(–surface);position:relative;overflow:hidden;
+-webkit-tap-highlight-color:transparent;
+touch-action:manipulation;
 }
 .drop-zone::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at 50% 110%,var(--fire-glow),transparent 60%);
-  opacity:0;transition:opacity .25s;
+content:’’;position:absolute;inset:0;
+background:radial-gradient(ellipse at 50% 110%,var(–fire-glow),transparent 60%);
+opacity:0;transition:opacity .25s;
 }
 .drop-zone:hover::before,.drop-zone.over::before{opacity:1}
 .drop-zone:hover,.drop-zone.over{
-  border-color:var(--fire);
-  box-shadow:0 0 0 1px var(--fire-glow2),0 6px 36px rgba(255,107,31,.14);
+border-color:var(–fire);
+box-shadow:0 0 0 1px var(–fire-glow2),0 6px 36px rgba(255,107,31,.14);
 }
 .drop-icon{
-  width:60px;height:60px;margin:0 auto 16px;
-  background:linear-gradient(145deg,var(--fire-glow),rgba(56,217,192,.07));
-  border:1px solid rgba(255,107,31,.22);
-  border-radius:13px;display:flex;align-items:center;justify-content:center;
-  font-size:26px;animation:float 3s ease-in-out infinite;
+width:60px;height:60px;margin:0 auto 16px;
+background:linear-gradient(145deg,var(–fire-glow),rgba(56,217,192,.07));
+border:1px solid rgba(255,107,31,.22);
+border-radius:13px;display:flex;align-items:center;justify-content:center;
+font-size:26px;animation:float 3s ease-in-out infinite;
 }
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 .drop-zone h3{font-size:.97rem;font-weight:600;margin-bottom:7px}
-.drop-zone p{color:var(--text-2);font-size:.81rem;margin-bottom:16px}
+.drop-zone p{color:var(–text-2);font-size:.81rem;margin-bottom:16px}
 .drop-or{
-  font-family:var(--mono);font-size:.62rem;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--text-3);margin:13px 0;
+font-family:var(–mono);font-size:.62rem;letter-spacing:.13em;
+text-transform:uppercase;color:var(–text-3);margin:13px 0;
 }
 .feat-chips{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:7px;max-width:500px;width:100%;margin-top:13px;
+display:grid;grid-template-columns:repeat(3,1fr);
+gap:7px;max-width:500px;width:100%;margin-top:13px;
 }
 @media(max-width:460px){.feat-chips{grid-template-columns:repeat(2,1fr)}}
 .chip{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:7px;padding:8px 11px;
-  display:flex;align-items:center;gap:6px;
-  font-size:.76rem;color:var(--text-2);
+background:var(–card);border:1px solid var(–border);
+border-radius:7px;padding:8px 11px;
+display:flex;align-items:center;gap:6px;
+font-size:.76rem;color:var(–text-2);
 }
 
 /* ═══════════════════════════════════════
-   OCR CONFIG SCREEN
+OCR CONFIG SCREEN
 ═══════════════════════════════════════ */
 .cfg-body{
-  flex:1;max-width:860px;width:100%;margin:0 auto;
-  padding:24px 28px 48px;overflow-y:auto;
+flex:1;max-width:860px;width:100%;margin:0 auto;
+padding:24px 28px 48px;overflow-y:auto;
 }
 @media(max-width:600px){.cfg-body{padding:16px 14px 40px}}
 .file-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--r);padding:14px 18px;
-  display:flex;align-items:center;gap:13px;margin-bottom:24px;
+background:var(–card);border:1px solid var(–border);
+border-radius:var(–r);padding:14px 18px;
+display:flex;align-items:center;gap:13px;margin-bottom:24px;
 }
 .file-card-icon{
-  width:40px;height:40px;flex-shrink:0;
-  background:var(--fire-glow);border:1px solid rgba(255,107,31,.26);
-  border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;
+width:40px;height:40px;flex-shrink:0;
+background:var(–fire-glow);border:1px solid rgba(255,107,31,.26);
+border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;
 }
 .file-card-info h3{font-size:.92rem;font-weight:600;margin-bottom:2px}
-.file-card-info p{font-family:var(--mono);font-size:.71rem;color:var(--text-2)}
+.file-card-info p{font-family:var(–mono);font-size:.71rem;color:var(–text-2)}
 .file-card-aside{margin-left:auto;display:flex;gap:7px;flex-wrap:wrap;flex-shrink:0}
 
 /* Page range */
 .page-range-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--r-sm);padding:14px 18px;margin-bottom:24px;
+background:var(–card);border:1px solid var(–border);
+border-radius:var(–r-sm);padding:14px 18px;margin-bottom:24px;
 }
 .page-range-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.page-range-row label{font-size:.82rem;color:var(--text-2);font-weight:500;flex-shrink:0}
+.page-range-row label{font-size:.82rem;color:var(–text-2);font-weight:500;flex-shrink:0}
 .pg-inp{
-  width:65px;background:var(--surface);border:1px solid var(--border);
-  border-radius:6px;color:var(--text);font-family:var(--mono);font-size:.83rem;
-  padding:6px 9px;text-align:center;transition:border-color .13s;
-  -moz-appearance:textfield;
+width:65px;background:var(–surface);border:1px solid var(–border);
+border-radius:6px;color:var(–text);font-family:var(–mono);font-size:.83rem;
+padding:6px 9px;text-align:center;transition:border-color .13s;
+-moz-appearance:textfield;
 }
 .pg-inp::-webkit-outer-spin-button,.pg-inp::-webkit-inner-spin-button{-webkit-appearance:none}
-.pg-inp:focus{outline:none;border-color:var(--fire)}
-.range-sep{color:var(--text-3);font-size:.78rem;font-family:var(--mono)}
-.range-hint{font-family:var(--mono);font-size:.67rem;color:var(--text-3);margin-left:auto}
+.pg-inp:focus{outline:none;border-color:var(–fire)}
+.range-sep{color:var(–text-3);font-size:.78rem;font-family:var(–mono)}
+.range-hint{font-family:var(–mono);font-size:.67rem;color:var(–text-3);margin-left:auto}
 .preset-btns{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}
 .preset-btn{
-  font-family:var(--mono);font-size:.67rem;padding:4px 9px;border-radius:5px;
-  background:var(--surface);color:var(--text-3);
-  border:1px solid var(--border);cursor:pointer;transition:all .13s;
+font-family:var(–mono);font-size:.67rem;padding:4px 9px;border-radius:5px;
+background:var(–surface);color:var(–text-3);
+border:1px solid var(–border);cursor:pointer;transition:all .13s;
 }
-.preset-btn:hover{border-color:var(--border-hi);color:var(--text)}
+.preset-btn:hover{border-color:var(–border-hi);color:var(–text)}
 
 /* Mode grid */
 .mode-grid{
-  display:grid;grid-template-columns:repeat(5,1fr);
-  gap:7px;margin-bottom:24px;
+display:grid;grid-template-columns:repeat(5,1fr);
+gap:7px;margin-bottom:24px;
 }
 @media(max-width:660px){.mode-grid{grid-template-columns:repeat(2,1fr)}}
 .mode-card{
-  background:var(--card);border:2px solid var(--border);
-  border-radius:var(--r);padding:12px 10px;
-  cursor:pointer;transition:all .15s;position:relative;
+background:var(–card);border:2px solid var(–border);
+border-radius:var(–r);padding:12px 10px;
+cursor:pointer;transition:all .15s;position:relative;
 }
-.mode-card:hover{border-color:var(--border-hi);background:var(--card-hi)}
-.mode-card.sel{border-color:var(--fire);background:var(--fire-glow2)}
+.mode-card:hover{border-color:var(–border-hi);background:var(–card-hi)}
+.mode-card.sel{border-color:var(–fire);background:var(–fire-glow2)}
 .mode-card.sel::after{
-  content:'✓';position:absolute;top:6px;right:6px;
-  width:15px;height:15px;background:var(--fire);color:#fff;
-  border-radius:50%;font-size:9px;font-weight:800;
-  text-align:center;line-height:15px;
+content:‘✓’;position:absolute;top:6px;right:6px;
+width:15px;height:15px;background:var(–fire);color:#fff;
+border-radius:50%;font-size:9px;font-weight:800;
+text-align:center;line-height:15px;
 }
 .mode-icon{font-size:1.2rem;margin-bottom:5px}
 .mode-name{font-weight:700;font-size:.78rem;margin-bottom:2px}
-.mode-desc{font-size:.68rem;color:var(--text-2);line-height:1.4}
+.mode-desc{font-size:.68rem;color:var(–text-2);line-height:1.4}
 .mode-tag{
-  display:inline-block;font-family:var(--mono);
-  font-size:.56rem;padding:2px 5px;border-radius:3px;margin-top:4px;
+display:inline-block;font-family:var(–mono);
+font-size:.56rem;padding:2px 5px;border-radius:3px;margin-top:4px;
 }
-.mt-fast {background:rgba(61,214,140,.1);color:var(--green)}
-.mt-bal  {background:rgba(56,217,192,.1);color:var(--teal)}
-.mt-hi   {background:rgba(255,140,66,.1);color:var(--fire-2)}
-.mt-max  {background:rgba(255,107,31,.1);color:var(--fire)}
-.mt-loss {background:rgba(139,139,158,.1);color:var(--text-2)}
+.mt-fast {background:rgba(61,214,140,.1);color:var(–green)}
+.mt-bal  {background:rgba(56,217,192,.1);color:var(–teal)}
+.mt-hi   {background:rgba(255,140,66,.1);color:var(–fire-2)}
+.mt-max  {background:rgba(255,107,31,.1);color:var(–fire)}
+.mt-loss {background:rgba(139,139,158,.1);color:var(–text-2)}
 
 /* Language, toggles */
 .lang-sel{
-  width:100%;background:var(--card);border:1px solid var(--border);
-  border-radius:var(--r-sm);color:var(--text);
-  font-family:var(--font);font-size:.87rem;font-weight:500;
-  padding:11px 15px;appearance:none;cursor:pointer;
-  transition:border-color .13s;margin-bottom:24px;
+width:100%;background:var(–card);border:1px solid var(–border);
+border-radius:var(–r-sm);color:var(–text);
+font-family:var(–font);font-size:.87rem;font-weight:500;
+padding:11px 15px;appearance:none;cursor:pointer;
+transition:border-color .13s;margin-bottom:24px;
 }
-.lang-sel:focus{outline:none;border-color:var(--fire)}
+.lang-sel:focus{outline:none;border-color:var(–fire)}
 .pre-grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
-  gap:7px;margin-bottom:16px;
+display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+gap:7px;margin-bottom:16px;
 }
 .tog{
-  display:flex;align-items:center;gap:8px;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:8px;padding:9px 11px;
-  cursor:pointer;transition:all .13s;font-size:.79rem;
-  color:var(--text-2);user-select:none;
+display:flex;align-items:center;gap:8px;
+background:var(–card);border:1px solid var(–border);
+border-radius:8px;padding:9px 11px;
+cursor:pointer;transition:all .13s;font-size:.79rem;
+color:var(–text-2);user-select:none;
 }
-.tog:hover{border-color:var(--border-hi)}
-.tog.on{border-color:rgba(255,107,31,.45);color:var(--text);background:var(--fire-glow2)}
+.tog:hover{border-color:var(–border-hi)}
+.tog.on{border-color:rgba(255,107,31,.45);color:var(–text);background:var(–fire-glow2)}
 .tog-sw{
-  width:26px;height:15px;flex-shrink:0;
-  background:var(--border-hi);border-radius:8px;
-  position:relative;transition:background .13s;
+width:26px;height:15px;flex-shrink:0;
+background:var(–border-hi);border-radius:8px;
+position:relative;transition:background .13s;
 }
 .tog-sw::after{
-  content:'';position:absolute;top:3px;left:3px;
-  width:9px;height:9px;background:var(--text-3);
-  border-radius:50%;transition:all .13s;
+content:’’;position:absolute;top:3px;left:3px;
+width:9px;height:9px;background:var(–text-3);
+border-radius:50%;transition:all .13s;
 }
-.tog.on .tog-sw{background:var(--fire)}
+.tog.on .tog-sw{background:var(–fire)}
 .tog.on .tog-sw::after{left:14px;background:#fff}
 .adv-toggle{
-  display:flex;align-items:center;gap:8px;cursor:pointer;
-  color:var(--text-2);font-size:.81rem;padding:7px 0;user-select:none;
+display:flex;align-items:center;gap:8px;cursor:pointer;
+color:var(–text-2);font-size:.81rem;padding:7px 0;user-select:none;
 }
-.adv-toggle:hover{color:var(--text)}
+.adv-toggle:hover{color:var(–text)}
 .adv-arrow{transition:transform .17s;font-size:.62rem}
 .adv-toggle.open .adv-arrow{transform:rotate(90deg)}
 .adv-panel{display:none}
 .adv-panel.open{display:block}
 .range-grp{margin-bottom:13px}
-.range-lbl{display:flex;justify-content:space-between;margin-bottom:6px;font-size:.79rem;color:var(--text-2)}
-.range-val{font-family:var(--mono);color:var(--fire-2);font-size:.79rem}
-input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
+.range-lbl{display:flex;justify-content:space-between;margin-bottom:6px;font-size:.79rem;color:var(–text-2)}
+.range-val{font-family:var(–mono);color:var(–fire-2);font-size:.79rem}
+input[type=range]{width:100%;accent-color:var(–fire);cursor:pointer}
 .cfg-actions{
-  display:flex;gap:9px;align-items:center;
-  padding-top:18px;border-top:1px solid var(--border);
+display:flex;gap:9px;align-items:center;
+padding-top:18px;border-top:1px solid var(–border);
 }
 
 /* ═══════════════════════════════════════
-   PROCESSING SCREEN
+PROCESSING SCREEN
 ═══════════════════════════════════════ */
 .proc-layout{
-  flex:1;display:grid;grid-template-rows:auto 1fr;
-  min-height:0;overflow:hidden;
+flex:1;display:grid;grid-template-rows:auto 1fr;
+min-height:0;overflow:hidden;
 }
 .proc-top{
-  padding:14px 22px 11px;border-bottom:1px solid var(--border);
-  background:var(--surface);flex-shrink:0;
+padding:14px 22px 11px;border-bottom:1px solid var(–border);
+background:var(–surface);flex-shrink:0;
 }
 .dcbar{
-  padding:6px 22px;
-  background:rgba(255,107,31,.07);
-  border-bottom:1px solid rgba(255,107,31,.13);
-  display:flex;align-items:center;justify-content:center;gap:7px;
-  font-size:.76rem;color:var(--text-2);flex-shrink:0;
-  flex-wrap:wrap;text-align:center;
+padding:6px 22px;
+background:rgba(255,107,31,.07);
+border-bottom:1px solid rgba(255,107,31,.13);
+display:flex;align-items:center;justify-content:center;gap:7px;
+font-size:.76rem;color:var(–text-2);flex-shrink:0;
+flex-wrap:wrap;text-align:center;
 }
 @media(max-width:480px){.dcbar{font-size:.68rem;padding:6px 14px}}
-.dcbar strong{color:var(--fire-2);font-weight:600}
+.dcbar strong{color:var(–fire-2);font-weight:600}
 .dcbar-sub{display:inline}
 @media(max-width:380px){.dcbar-sub{display:none}}
 .prog-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--r);padding:14px 18px;margin-bottom:9px;
+background:var(–card);border:1px solid var(–border);
+border-radius:var(–r);padding:14px 18px;margin-bottom:9px;
 }
 .prog-header{display:flex;align-items:baseline;gap:11px;margin-bottom:8px}
-.prog-pct{font-family:var(--mono);font-size:1.9rem;font-weight:500;color:var(--fire-2);line-height:1}
-.prog-stage{font-size:.81rem;color:var(--text-2)}
-.prog-bg{background:var(--surface);border-radius:4px;height:5px;overflow:hidden;margin-bottom:8px}
+.prog-pct{font-family:var(–mono);font-size:1.9rem;font-weight:500;color:var(–fire-2);line-height:1}
+.prog-stage{font-size:.81rem;color:var(–text-2)}
+.prog-bg{background:var(–surface);border-radius:4px;height:5px;overflow:hidden;margin-bottom:8px}
 .prog-bar{
-  height:100%;width:0%;border-radius:4px;transition:width .38s ease;
-  background:linear-gradient(90deg,var(--fire-dim),var(--fire),var(--fire-2));
-  position:relative;overflow:hidden;
+height:100%;width:0%;border-radius:4px;transition:width .38s ease;
+background:linear-gradient(90deg,var(–fire-dim),var(–fire),var(–fire-2));
+position:relative;overflow:hidden;
 }
 .prog-bar::after{
-  content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);
-  animation:shim 1.9s infinite;
+content:’’;position:absolute;top:0;left:-100%;width:100%;height:100%;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);
+animation:shim 1.9s infinite;
 }
 @keyframes shim{0%{left:-100%}100%{left:100%}}
 .prog-meta{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:4px;font-family:var(--mono);font-size:.65rem;color:var(--text-3);
+display:grid;grid-template-columns:repeat(4,1fr);
+gap:4px;font-family:var(–mono);font-size:.65rem;color:var(–text-3);
 }
 @media(max-width:540px){.prog-meta{grid-template-columns:repeat(2,1fr)}}
 .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
 @media(max-width:540px){.stat-row{grid-template-columns:repeat(2,1fr)}}
 .stat-box{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:8px;padding:8px 12px;
+background:var(–card);border:1px solid var(–border);
+border-radius:8px;padding:8px 12px;
 }
-.stat-lbl{font-family:var(--mono);font-size:.57rem;color:var(--text-3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px}
-.stat-val{font-family:var(--mono);font-size:.98rem;font-weight:500}
+.stat-lbl{font-family:var(–mono);font-size:.57rem;color:var(–text-3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px}
+.stat-val{font-family:var(–mono);font-size:.98rem;font-weight:500}
 .proc-body{
-  display:grid;grid-template-columns:1fr 278px;
-  overflow:hidden;min-height:0;
+display:grid;grid-template-columns:1fr 278px;
+overflow:hidden;min-height:0;
 }
 @media(max-width:640px){.proc-body{grid-template-columns:1fr;grid-template-rows:1fr minmax(130px,220px)}}
 .proc-main{padding:14px 18px;overflow-y:auto}
-.log-panel{display:flex;flex-direction:column;border-left:1px solid var(--border);overflow:hidden}
-@media(max-width:640px){.log-panel{border-left:none;border-top:1px solid var(--border)}}
-.log-hdr{padding:8px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.log-hdr-t{font-family:var(--mono);font-size:.58rem;color:var(--text-3);letter-spacing:.1em;text-transform:uppercase}
-.log-body{flex:1;overflow-y:auto;padding:7px 9px;font-family:var(--mono);font-size:.67rem;line-height:1.75}
+.log-panel{display:flex;flex-direction:column;border-left:1px solid var(–border);overflow:hidden}
+@media(max-width:640px){.log-panel{border-left:none;border-top:1px solid var(–border)}}
+.log-hdr{padding:8px 12px;border-bottom:1px solid var(–border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.log-hdr-t{font-family:var(–mono);font-size:.58rem;color:var(–text-3);letter-spacing:.1em;text-transform:uppercase}
+.log-body{flex:1;overflow-y:auto;padding:7px 9px;font-family:var(–mono);font-size:.67rem;line-height:1.75}
 .log-row{display:flex;gap:6px}
-.log-t{color:var(--text-3);flex-shrink:0}
-.log-i{color:var(--text-2)}.log-s{color:var(--green)}.log-w{color:var(--fire-2)}.log-e{color:var(--red)}
+.log-t{color:var(–text-3);flex-shrink:0}
+.log-i{color:var(–text-2)}.log-s{color:var(–green)}.log-w{color:var(–fire-2)}.log-e{color:var(–red)}
 .thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(95px,1fr));gap:6px}
 .thumb-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:8px;overflow:hidden;transition:border-color .13s;
+background:var(–card);border:1px solid var(–border);
+border-radius:8px;overflow:hidden;transition:border-color .13s;
 }
-.thumb-card.proc{border-color:var(--fire)}
+.thumb-card.proc{border-color:var(–fire)}
 .thumb-card.done{border-color:rgba(61,214,140,.4)}
 .thumb-card.warn{border-color:rgba(245,158,11,.5)}
 .thumb-card.skip{border-color:rgba(91,156,246,.4)}
 .thumb-card.err {border-color:rgba(244,107,107,.4)}
 .thumb-card img{width:100%;display:block}
 .thumb-ph{
-  aspect-ratio:.707;background:var(--surface);
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--mono);font-size:.6rem;color:var(--text-3);
+aspect-ratio:.707;background:var(–surface);
+display:flex;align-items:center;justify-content:center;
+font-family:var(–mono);font-size:.6rem;color:var(–text-3);
 }
 .thumb-foot{padding:4px 5px;display:flex;align-items:center;justify-content:space-between}
-.thumb-pg{font-family:var(--mono);font-size:.58rem;color:var(--text-3)}
-.pulse{width:7px;height:7px;background:var(--fire);border-radius:50%;animation:pls 1.4s ease infinite;flex-shrink:0}
+.thumb-pg{font-family:var(–mono);font-size:.58rem;color:var(–text-3)}
+.pulse{width:7px;height:7px;background:var(–fire);border-radius:50%;animation:pls 1.4s ease infinite;flex-shrink:0}
 @keyframes pls{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.6)}}
 
 /* ═══════════════════════════════════════
-   OCR RESULT SCREEN
+OCR RESULT SCREEN
 ═══════════════════════════════════════ */
 .result-body{
-  flex:1;max-width:820px;margin:0 auto;
-  width:100%;padding:28px 24px 52px;overflow-y:auto;
+flex:1;max-width:820px;margin:0 auto;
+width:100%;padding:28px 24px 52px;overflow-y:auto;
 }
 .result-hero{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:14px;padding:28px;text-align:center;
-  margin-bottom:18px;position:relative;overflow:hidden;
+background:var(–card);border:1px solid var(–border);
+border-radius:14px;padding:28px;text-align:center;
+margin-bottom:18px;position:relative;overflow:hidden;
 }
 .result-hero::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at 50% 0%,var(--green-glow),transparent 60%);
+content:’’;position:absolute;inset:0;
+background:radial-gradient(ellipse at 50% 0%,var(–green-glow),transparent 60%);
 }
 .check-ring{
-  width:52px;height:52px;
-  background:var(--green-glow);border:2px solid rgba(61,214,140,.32);
-  border-radius:50%;display:flex;align-items:center;justify-content:center;
-  font-size:22px;margin:0 auto 12px;position:relative;
+width:52px;height:52px;
+background:var(–green-glow);border:2px solid rgba(61,214,140,.32);
+border-radius:50%;display:flex;align-items:center;justify-content:center;
+font-size:22px;margin:0 auto 12px;position:relative;
 }
 .result-hero h2{font-size:1.35rem;font-weight:800;margin-bottom:6px}
-.result-hero p{color:var(--text-2);font-size:.85rem;line-height:1.6}
+.result-hero p{color:var(–text-2);font-size:.85rem;line-height:1.6}
 
 /* size warning */
 .size-warning{
-  background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);
-  border-radius:8px;padding:10px 14px;
-  font-size:.79rem;color:var(--amber);
-  display:none;align-items:center;gap:8px;margin-bottom:12px;
+background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);
+border-radius:8px;padding:10px 14px;
+font-size:.79rem;color:var(–amber);
+display:none;align-items:center;gap:8px;margin-bottom:12px;
 }
 .size-warning.show{display:flex}
 
 .result-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
 @media(max-width:500px){.result-stats{grid-template-columns:repeat(2,1fr)}}
-.rs{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px;text-align:center}
-.rs .rv{font-family:var(--mono);font-size:1.5rem;font-weight:500;color:var(--fire-2)}
-.rs .rl{font-family:var(--mono);font-size:.57rem;color:var(--text-3);text-transform:uppercase;letter-spacing:.1em;margin-top:3px}
+.rs{background:var(–card);border:1px solid var(–border);border-radius:var(–r);padding:14px;text-align:center}
+.rs .rv{font-family:var(–mono);font-size:1.5rem;font-weight:500;color:var(–fire-2)}
+.rs .rl{font-family:var(–mono);font-size:.57rem;color:var(–text-3);text-transform:uppercase;letter-spacing:.1em;margin-top:3px}
 
 .result-dl-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
 @media(max-width:480px){.result-dl-row{grid-template-columns:1fr}}
 
 /* Text preview */
 .text-preview-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--r);margin-top:14px;overflow:hidden;
+background:var(–card);border:1px solid var(–border);
+border-radius:var(–r);margin-top:14px;overflow:hidden;
 }
 .text-preview-hdr{
-  padding:11px 16px;cursor:pointer;
-  display:flex;align-items:center;justify-content:space-between;
-  font-size:.85rem;font-weight:600;user-select:none;
+padding:11px 16px;cursor:pointer;
+display:flex;align-items:center;justify-content:space-between;
+font-size:.85rem;font-weight:600;user-select:none;
 }
-.text-preview-hdr:hover{background:var(--card-hi)}
+.text-preview-hdr:hover{background:var(–card-hi)}
 .text-preview-body{
-  border-top:1px solid var(--border);
-  padding:14px 16px;
-  max-height:320px;overflow-y:auto;
-  font-family:var(--mono);font-size:.74rem;line-height:1.8;
-  color:var(--text-2);white-space:pre-wrap;word-break:break-word;
-  display:none;
+border-top:1px solid var(–border);
+padding:14px 16px;
+max-height:320px;overflow-y:auto;
+font-family:var(–mono);font-size:.74rem;line-height:1.8;
+color:var(–text-2);white-space:pre-wrap;word-break:break-word;
+display:none;
 }
 .text-preview-actions{
-  border-top:1px solid var(--border);padding:10px 16px;
-  display:none;gap:8px;flex-wrap:wrap;
+border-top:1px solid var(–border);padding:10px 16px;
+display:none;gap:8px;flex-wrap:wrap;
 }
 .text-preview-actions.open{display:flex}
 
 /* Report card */
-.report-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);margin-top:12px;overflow:hidden}
+.report-card{background:var(–card);border:1px solid var(–border);border-radius:var(–r);margin-top:12px;overflow:hidden}
 .report-hdr{padding:12px 16px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-size:.84rem;font-weight:600}
-.report-hdr:hover{background:var(--card-hi)}
-.report-rows{border-top:1px solid var(--border);padding:0 16px}
-.report-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:.79rem}
+.report-hdr:hover{background:var(–card-hi)}
+.report-rows{border-top:1px solid var(–border);padding:0 16px}
+.report-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(–border);font-size:.79rem}
 .report-row:last-child{border-bottom:none}
-.rk{color:var(--text-2)}.rv2{font-family:var(--mono);font-size:.76rem}
+.rk{color:var(–text-2)}.rv2{font-family:var(–mono);font-size:.76rem}
 
 /* ═══════════════════════════════════════
-   MERGE SCREEN
+MERGE SCREEN
 ═══════════════════════════════════════ */
 .tool-body{
-  flex:1;max-width:700px;width:100%;margin:0 auto;
-  padding:24px 24px 48px;overflow-y:auto;
+flex:1;max-width:700px;width:100%;margin:0 auto;
+padding:24px 24px 48px;overflow-y:auto;
 }
 .multi-drop{
-  border:2px dashed var(--border-hi);border-radius:12px;
-  padding:32px 24px;text-align:center;cursor:pointer;
-  background:var(--surface);transition:all .18s;margin-bottom:18px;
-  -webkit-tap-highlight-color:transparent;
-  touch-action:manipulation;
+border:2px dashed var(–border-hi);border-radius:12px;
+padding:32px 24px;text-align:center;cursor:pointer;
+background:var(–surface);transition:all .18s;margin-bottom:18px;
+-webkit-tap-highlight-color:transparent;
+touch-action:manipulation;
 }
-.multi-drop:hover,.multi-drop.over{border-color:var(--blue);box-shadow:0 0 0 1px rgba(91,156,246,.1)}
+.multi-drop:hover,.multi-drop.over{border-color:var(–blue);box-shadow:0 0 0 1px rgba(91,156,246,.1)}
 .file-list{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
 .file-row{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:8px;padding:10px 14px;
-  display:flex;align-items:center;gap:11px;
+background:var(–card);border:1px solid var(–border);
+border-radius:8px;padding:10px 14px;
+display:flex;align-items:center;gap:11px;
 }
 .file-row-num{
-  width:22px;height:22px;flex-shrink:0;
-  background:var(--fire-glow);border-radius:5px;
-  font-family:var(--mono);font-size:.68rem;color:var(--fire-2);
-  display:flex;align-items:center;justify-content:center;font-weight:600;
+width:22px;height:22px;flex-shrink:0;
+background:var(–fire-glow);border-radius:5px;
+font-family:var(–mono);font-size:.68rem;color:var(–fire-2);
+display:flex;align-items:center;justify-content:center;font-weight:600;
 }
 .file-row-name{flex:1;font-size:.82rem;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.file-row-meta{font-family:var(--mono);font-size:.68rem;color:var(--text-3);flex-shrink:0}
+.file-row-meta{font-family:var(–mono);font-size:.68rem;color:var(–text-3);flex-shrink:0}
 .file-row-rm{
-  width:22px;height:22px;flex-shrink:0;
-  background:var(--red-glow);border:1px solid rgba(244,107,107,.2);
-  border-radius:5px;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--red);
-  transition:background .13s;
+width:22px;height:22px;flex-shrink:0;
+background:var(–red-glow);border:1px solid rgba(244,107,107,.2);
+border-radius:5px;cursor:pointer;
+display:flex;align-items:center;justify-content:center;font-size:10px;color:var(–red);
+transition:background .13s;
 }
 .file-row-rm:hover{background:rgba(244,107,107,.2)}
 .tool-progress{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--r);padding:14px 18px;margin-bottom:14px;display:none;
+background:var(–card);border:1px solid var(–border);
+border-radius:var(–r);padding:14px 18px;margin-bottom:14px;display:none;
 }
 .tool-progress.show{display:block}
 .tool-result{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--r);padding:18px;text-align:center;
-  display:none;
+background:var(–card);border:1px solid var(–border);
+border-radius:var(–r);padding:18px;text-align:center;
+display:none;
 }
 .tool-result.show{display:block}
 .tool-result h3{font-size:1rem;font-weight:700;margin-bottom:7px}
-.tool-result p{font-size:.81rem;color:var(--text-2);margin-bottom:16px}
+.tool-result p{font-size:.81rem;color:var(–text-2);margin-bottom:16px}
 
 /* ═══════════════════════════════════════
-   SPLIT SCREEN
+SPLIT SCREEN
 ═══════════════════════════════════════ */
 .split-ranges{
-  display:flex;flex-direction:column;gap:8px;margin-bottom:16px;
+display:flex;flex-direction:column;gap:8px;margin-bottom:16px;
 }
 .split-range-row{
-  display:flex;align-items:center;gap:9px;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:8px;padding:10px 14px;
+display:flex;align-items:center;gap:9px;
+background:var(–card);border:1px solid var(–border);
+border-radius:8px;padding:10px 14px;
 }
 .add-range-btn{
-  display:flex;align-items:center;gap:7px;
-  background:var(--surface);border:1px dashed var(--border-hi);
-  border-radius:8px;padding:9px 14px;
-  font-size:.81rem;color:var(--text-2);cursor:pointer;
-  transition:all .13s;margin-bottom:14px;
+display:flex;align-items:center;gap:7px;
+background:var(–surface);border:1px dashed var(–border-hi);
+border-radius:8px;padding:9px 14px;
+font-size:.81rem;color:var(–text-2);cursor:pointer;
+transition:all .13s;margin-bottom:14px;
 }
-.add-range-btn:hover{border-color:var(--blue);color:var(--text)}
+.add-range-btn:hover{border-color:var(–blue);color:var(–text)}
 
 /* ═══════════════════════════════════════
-   COMPRESS SCREEN
+COMPRESS SCREEN
 ═══════════════════════════════════════ */
 .compress-levels{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:18px}
 .cl-card{
-  background:var(--card);border:2px solid var(--border);
-  border-radius:var(--r);padding:14px 12px;cursor:pointer;
-  transition:all .15s;text-align:center;
+background:var(–card);border:2px solid var(–border);
+border-radius:var(–r);padding:14px 12px;cursor:pointer;
+transition:all .15s;text-align:center;
 }
-.cl-card:hover{border-color:var(--border-hi)}
-.cl-card.sel{border-color:var(--teal)}
+.cl-card:hover{border-color:var(–border-hi)}
+.cl-card.sel{border-color:var(–teal)}
 .cl-icon{font-size:1.5rem;margin-bottom:6px}
 .cl-name{font-size:.82rem;font-weight:700;margin-bottom:3px}
-.cl-desc{font-size:.7rem;color:var(--text-2);line-height:1.4}
+.cl-desc{font-size:.7rem;color:var(–text-2);line-height:1.4}
 .cl-tag{
-  display:inline-block;font-family:var(--mono);
-  font-size:.57rem;padding:2px 5px;border-radius:3px;margin-top:4px;
+display:inline-block;font-family:var(–mono);
+font-size:.57rem;padding:2px 5px;border-radius:3px;margin-top:4px;
 }
 
 /* ═══════════════════════════════════════
-   NOTIFICATION
+NOTIFICATION
 ═══════════════════════════════════════ */
 .notif{
-  position:fixed;bottom:18px;right:18px;z-index:9000;
-  background:var(--card-hi);border:1px solid var(--border-hi);
-  border-radius:10px;padding:10px 14px;
-  display:flex;align-items:center;gap:8px;
-  font-size:.82rem;font-weight:500;
-  box-shadow:0 8px 32px rgba(0,0,0,.6);
-  transform:translateY(10px);opacity:0;
-  transition:all .24s ease;max-width:280px;
+position:fixed;bottom:18px;right:18px;z-index:9000;
+background:var(–card-hi);border:1px solid var(–border-hi);
+border-radius:10px;padding:10px 14px;
+display:flex;align-items:center;gap:8px;
+font-size:.82rem;font-weight:500;
+box-shadow:0 8px 32px rgba(0,0,0,.6);
+transform:translateY(10px);opacity:0;
+transition:all .24s ease;max-width:280px;
 }
 .notif.show{transform:translateY(0);opacity:1}
 
 /* ── ADSENSE SLOTS ── */
 .ad-slot{
-  background:var(--surface);border:1px dashed var(--border);
-  border-radius:8px;display:flex;align-items:center;justify-content:center;
-  color:var(--text-3);font-family:var(--mono);font-size:.62rem;
+background:var(–surface);border:1px dashed var(–border);
+border-radius:8px;display:flex;align-items:center;justify-content:center;
+color:var(–text-3);font-family:var(–mono);font-size:.62rem;
 }
 .ad-banner{height:90px;max-width:728px;width:100%}
 
@@ -820,6 +821,7 @@ input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
 #img2pdf-input{display:none}
 #rotate-input{display:none}
 </style>
+
 </head>
 <body>
 
@@ -850,6 +852,7 @@ input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
 <!-- ════════════════
      HOME
 ════════════════ -->
+
 <div class="screen active" id="screen-home">
   <header class="hdr">
     <div class="logo" title="Home">
@@ -877,135 +880,139 @@ input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
       <p>Every tool runs entirely in your browser — no uploads, no servers, no account required. Free forever.</p>
     </div>
 
-    <!-- Featured OCR -->
-    <div class="featured-tool" onclick="showScreen('ocr-upload')">
-      <div class="feat-left">
-        <div class="feat-icon-wrap">🔥</div>
-        <div class="feat-info">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px">
-            <h2>OCR PDF</h2>
-            <span class="badge badge-new">★ Featured</span>
-          </div>
-          <p>Make any scanned PDF fully searchable and copy-pasteable. Invisible text layer aligned word-by-word to your original page. Supports multiple languages.</p>
-          <div class="feat-chips-row">
-            <span class="badge badge-fire">Multiple Languages</span>
-            <span class="badge badge-t">Word-Level Align</span>
-            <span class="badge badge-g">Images Preserved</span>
-          </div>
-        </div>
+```
+<!-- Featured OCR -->
+<div class="featured-tool" onclick="showScreen('ocr-upload')">
+  <div class="feat-left">
+    <div class="feat-icon-wrap">🔥</div>
+    <div class="feat-info">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px">
+        <h2>OCR PDF</h2>
+        <span class="badge badge-new">★ Featured</span>
       </div>
-      <div class="feat-right">
-        <button class="btn btn-fire btn-lg" onclick="showScreen('ocr-upload');event.stopPropagation()">Use Tool →</button>
-        <span style="font-size:.71rem;color:var(--text-3);text-align:right">No upload required</span>
+      <p>Make any scanned PDF fully searchable and copy-pasteable. Invisible text layer aligned word-by-word to your original page. Supports multiple languages.</p>
+      <div class="feat-chips-row">
+        <span class="badge badge-fire">Multiple Languages</span>
+        <span class="badge badge-t">Word-Level Align</span>
+        <span class="badge badge-g">Images Preserved</span>
       </div>
     </div>
+  </div>
+  <div class="feat-right">
+    <button class="btn btn-fire btn-lg" onclick="showScreen('ocr-upload');event.stopPropagation()">Use Tool →</button>
+    <span style="font-size:.71rem;color:var(--text-3);text-align:right">No upload required</span>
+  </div>
+</div>
 
-    <div class="tools-section-lbl">More PDF Tools</div>
-    <div class="tool-grid">
+<div class="tools-section-lbl">More PDF Tools</div>
+<div class="tool-grid">
 
-      <div class="tool-card" onclick="showScreen('merge')">
-        <div class="tool-icon-box ti-blue">🔀</div>
-        <h3>Merge PDF</h3>
-        <p>Combine multiple PDF files into one document in seconds.</p>
-      </div>
+  <div class="tool-card" onclick="showScreen('merge')">
+    <div class="tool-icon-box ti-blue">🔀</div>
+    <h3>Merge PDF</h3>
+    <p>Combine multiple PDF files into one document in seconds.</p>
+  </div>
 
-      <div class="tool-card" onclick="showScreen('split')">
-        <div class="tool-icon-box ti-green">✂️</div>
-        <h3>Split PDF</h3>
-        <p>Extract specific pages or page ranges into separate PDF files.</p>
-      </div>
+  <div class="tool-card" onclick="showScreen('split')">
+    <div class="tool-icon-box ti-green">✂️</div>
+    <h3>Split PDF</h3>
+    <p>Extract specific pages or page ranges into separate PDF files.</p>
+  </div>
 
-      <div class="tool-card" onclick="showScreen('compress')">
-        <div class="tool-icon-box ti-amber">📦</div>
-        <h3>Compress PDF</h3>
-        <p>Reduce PDF file size by re-rendering pages at optimized quality.</p>
-      </div>
+  <div class="tool-card" onclick="showScreen('compress')">
+    <div class="tool-icon-box ti-amber">📦</div>
+    <h3>Compress PDF</h3>
+    <p>Reduce PDF file size by re-rendering pages at optimized quality.</p>
+  </div>
 
-      <div class="tool-card" onclick="showScreen('pdf2img')">
-        <div class="tool-icon-box ti-violet">🖼️</div>
-        <h3>PDF to Images</h3>
-        <p>Export every page as a high-quality PNG or JPEG image.</p>
-      </div>
+  <div class="tool-card" onclick="showScreen('pdf2img')">
+    <div class="tool-icon-box ti-violet">🖼️</div>
+    <h3>PDF to Images</h3>
+    <p>Export every page as a high-quality PNG or JPEG image.</p>
+  </div>
 
-      <div class="tool-card" onclick="showScreen('img2pdf')">
-        <div class="tool-icon-box ti-teal">📸</div>
-        <h3>Images to PDF</h3>
-        <p>Combine multiple images into a single PDF document.</p>
-      </div>
+  <div class="tool-card" onclick="showScreen('img2pdf')">
+    <div class="tool-icon-box ti-teal">📸</div>
+    <h3>Images to PDF</h3>
+    <p>Combine multiple images into a single PDF document.</p>
+  </div>
 
-      <div class="tool-card" onclick="showScreen('rotate')">
-        <div class="tool-icon-box ti-red">🔄</div>
-        <h3>Rotate PDF</h3>
-        <p>Rotate individual pages or the entire document to any angle.</p>
-      </div>
+  <div class="tool-card" onclick="showScreen('rotate')">
+    <div class="tool-icon-box ti-red">🔄</div>
+    <h3>Rotate PDF</h3>
+    <p>Rotate individual pages or the entire document to any angle.</p>
+  </div>
 
+</div>
+
+<!-- ADSENSE: bottom
+<div style="display:flex;justify-content:center;margin:12px 0 0">
+  <ins class="adsbygoogle" style="display:block;max-width:728px;width:100%" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0000000002" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div> -->
+
+<!-- SEO TEXT CONTENT — readable by Google AdSense and Search crawlers -->
+<section style="max-width:860px;margin:48px auto 0;padding:0 4px;border-top:1px solid var(--border);padding-top:40px">
+  <h2 style="font-size:1.2rem;font-weight:800;letter-spacing:-.03em;margin-bottom:12px">Free PDF Tools That Respect Your Privacy</h2>
+  <p style="font-size:.88rem;color:var(--text-2);line-height:1.75;margin-bottom:20px">PDFyre is a free collection of browser-based PDF tools. Every tool runs entirely inside your browser using JavaScript — your files are never uploaded to any server. We have no backend, no database, and no way to see your documents. All processing happens on your own device using your own CPU.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:24px;margin-bottom:28px">
+    <div>
+      <h3 style="font-size:.92rem;font-weight:700;margin-bottom:7px">🔥 OCR PDF — Make Scanned Documents Searchable</h3>
+      <p style="font-size:.82rem;color:var(--text-2);line-height:1.7">Our flagship OCR tool uses Tesseract.js to recognize text in scanned PDFs and embed an invisible, word-aligned searchable text layer into the output. Supports over 100 languages including English, Hindi, Arabic, Chinese, Japanese, Russian, and more. Choose from 5 quality modes from Fast (150 DPI) to Lossless (PNG). Works on textbooks, lecture slides, scanned forms, contracts, and any image-based PDF.</p>
     </div>
+    <div>
+      <h3 style="font-size:.92rem;font-weight:700;margin-bottom:7px">🔀 Merge PDF — Combine Multiple PDFs Into One</h3>
+      <p style="font-size:.82rem;color:var(--text-2);line-height:1.7">Combine any number of PDF files into a single document instantly. Pages are copied at original quality with no re-rendering and no quality loss. No file size limit, no watermarks, completely free. Perfect for combining chapters, reports, or scanned documents into one file.</p>
+    </div>
+    <div>
+      <h3 style="font-size:.92rem;font-weight:700;margin-bottom:7px">✂️ Split PDF — Extract Pages Into Separate Files</h3>
+      <p style="font-size:.82rem;color:var(--text-2);line-height:1.7">Extract specific pages or page ranges from any PDF into separate downloadable files. Define multiple ranges at once and download each as an independent PDF. Useful for separating chapters, sharing specific sections, or splitting double-sided scans.</p>
+    </div>
+    <div>
+      <h3 style="font-size:.92rem;font-weight:700;margin-bottom:7px">📦 Compress PDF — Reduce File Size</h3>
+      <p style="font-size:.82rem;color:var(--text-2);line-height:1.7">Reduce PDF file size by re-rendering pages at optimized image quality. Choose from Light, Balanced, or Aggressive compression levels. Works best on scanned PDFs and image-heavy documents. The compressed file is delivered as a standard PDF compatible with all PDF readers.</p>
+    </div>
+  </div>
 
-    <!-- ADSENSE: bottom
-    <div style="display:flex;justify-content:center;margin:12px 0 0">
-      <ins class="adsbygoogle" style="display:block;max-width:728px;width:100%" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0000000002" data-ad-format="auto" data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-    </div> -->
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px 22px;margin-bottom:28px">
+    <h3 style="font-size:.92rem;font-weight:700;margin-bottom:8px">Why PDFyre?</h3>
+    <ul style="font-size:.82rem;color:var(--text-2);line-height:1.85;padding-left:18px">
+      <li><strong style="color:var(--text)">No uploads ever</strong> — your files never leave your browser tab</li>
+      <li><strong style="color:var(--text)">No account required</strong> — open the site and start immediately</li>
+      <li><strong style="color:var(--text)">No file size limits</strong> — process large PDFs using local memory and storage</li>
+      <li><strong style="color:var(--text)">No watermarks</strong> — output files are clean with no PDFyre branding</li>
+      <li><strong style="color:var(--text)">Free forever</strong> — all tools are and will remain completely free</li>
+      <li><strong style="color:var(--text)">Works offline</strong> — after first load, OCR runs without internet (language models are cached)</li>
+    </ul>
+  </div>
+</section>
 
-    <!-- SEO TEXT CONTENT — readable by Google AdSense and Search crawlers -->
-    <section style="max-width:860px;margin:48px auto 0;padding:0 4px;border-top:1px solid var(--border);padding-top:40px">
-      <h2 style="font-size:1.2rem;font-weight:800;letter-spacing:-.03em;margin-bottom:12px">Free PDF Tools That Respect Your Privacy</h2>
-      <p style="font-size:.88rem;color:var(--text-2);line-height:1.75;margin-bottom:20px">PDFyre is a free collection of browser-based PDF tools. Every tool runs entirely inside your browser using JavaScript — your files are never uploaded to any server. We have no backend, no database, and no way to see your documents. All processing happens on your own device using your own CPU.</p>
+<footer style="border-top:1px solid var(--border);padding:24px 28px;max-width:860px;margin:0 auto;width:100%">
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div class="logo" style="font-size:.95rem">
+      <div class="logo-icon" style="width:24px;height:24px;font-size:12px">🔥</div>
+      <span class="logo-wordmark">PDF<span class="yre">yre</span></span>
+    </div>
+    <div style="display:flex;gap:16px;font-size:.78rem;flex-wrap:wrap">
+      <a href="guides.html" style="color:var(--text-2);text-decoration:none">Guides</a>
+      <a href="about.html" style="color:var(--text-2);text-decoration:none">About</a>
+      <a href="privacy.html" style="color:var(--text-2);text-decoration:none">Privacy Policy</a>
+      <a href="terms.html" style="color:var(--text-2);text-decoration:none">Terms of Use</a>
+      <a href="mailto:wisemindsviral@gmail.com" style="color:var(--text-2);text-decoration:none">Contact</a>
+    </div>
+    <div style="font-size:.72rem;color:var(--text-3)">© 2025 PDFyre · Free forever · Zero uploads</div>
+  </div>
+</footer>
+```
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:24px;margin-bottom:28px">
-        <div>
-          <h3 style="font-size:.92rem;font-weight:700;margin-bottom:7px">🔥 OCR PDF — Make Scanned Documents Searchable</h3>
-          <p style="font-size:.82rem;color:var(--text-2);line-height:1.7">Our flagship OCR tool uses Tesseract.js to recognize text in scanned PDFs and embed an invisible, word-aligned searchable text layer into the output. Supports over 100 languages including English, Hindi, Arabic, Chinese, Japanese, Russian, and more. Choose from 5 quality modes from Fast (150 DPI) to Lossless (PNG). Works on textbooks, lecture slides, scanned forms, contracts, and any image-based PDF.</p>
-        </div>
-        <div>
-          <h3 style="font-size:.92rem;font-weight:700;margin-bottom:7px">🔀 Merge PDF — Combine Multiple PDFs Into One</h3>
-          <p style="font-size:.82rem;color:var(--text-2);line-height:1.7">Combine any number of PDF files into a single document instantly. Pages are copied at original quality with no re-rendering and no quality loss. No file size limit, no watermarks, completely free. Perfect for combining chapters, reports, or scanned documents into one file.</p>
-        </div>
-        <div>
-          <h3 style="font-size:.92rem;font-weight:700;margin-bottom:7px">✂️ Split PDF — Extract Pages Into Separate Files</h3>
-          <p style="font-size:.82rem;color:var(--text-2);line-height:1.7">Extract specific pages or page ranges from any PDF into separate downloadable files. Define multiple ranges at once and download each as an independent PDF. Useful for separating chapters, sharing specific sections, or splitting double-sided scans.</p>
-        </div>
-        <div>
-          <h3 style="font-size:.92rem;font-weight:700;margin-bottom:7px">📦 Compress PDF — Reduce File Size</h3>
-          <p style="font-size:.82rem;color:var(--text-2);line-height:1.7">Reduce PDF file size by re-rendering pages at optimized image quality. Choose from Light, Balanced, or Aggressive compression levels. Works best on scanned PDFs and image-heavy documents. The compressed file is delivered as a standard PDF compatible with all PDF readers.</p>
-        </div>
-      </div>
-
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px 22px;margin-bottom:28px">
-        <h3 style="font-size:.92rem;font-weight:700;margin-bottom:8px">Why PDFyre?</h3>
-        <ul style="font-size:.82rem;color:var(--text-2);line-height:1.85;padding-left:18px">
-          <li><strong style="color:var(--text)">No uploads ever</strong> — your files never leave your browser tab</li>
-          <li><strong style="color:var(--text)">No account required</strong> — open the site and start immediately</li>
-          <li><strong style="color:var(--text)">No file size limits</strong> — process large PDFs using local memory and storage</li>
-          <li><strong style="color:var(--text)">No watermarks</strong> — output files are clean with no PDFyre branding</li>
-          <li><strong style="color:var(--text)">Free forever</strong> — all tools are and will remain completely free</li>
-          <li><strong style="color:var(--text)">Works offline</strong> — after first load, OCR runs without internet (language models are cached)</li>
-        </ul>
-      </div>
-    </section>
-
-    <footer style="border-top:1px solid var(--border);padding:24px 28px;max-width:860px;margin:0 auto;width:100%">
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
-        <div class="logo" style="font-size:.95rem">
-          <div class="logo-icon" style="width:24px;height:24px;font-size:12px">🔥</div>
-          <span class="logo-wordmark">PDF<span class="yre">yre</span></span>
-        </div>
-        <div style="display:flex;gap:16px;font-size:.78rem;flex-wrap:wrap">
-          <a href="guides.html" style="color:var(--text-2);text-decoration:none">Guides</a>
-          <a href="about.html" style="color:var(--text-2);text-decoration:none">About</a>
-          <a href="privacy.html" style="color:var(--text-2);text-decoration:none">Privacy Policy</a>
-          <a href="terms.html" style="color:var(--text-2);text-decoration:none">Terms of Use</a>
-          <a href="mailto:wisemindsviral@gmail.com" style="color:var(--text-2);text-decoration:none">Contact</a>
-        </div>
-        <div style="font-size:.72rem;color:var(--text-3)">© 2025 PDFyre · Free forever · Zero uploads</div>
-      </div>
-    </footer>
   </div>
 </div>
 
 <!-- ════════════════
      OCR UPLOAD
 ════════════════ -->
+
 <div class="screen" id="screen-ocr-upload">
   <header class="hdr">
     <div class="logo" onclick="safeGoHome()" title="Back to Home">
@@ -1052,6 +1059,7 @@ input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
 <!-- ════════════════
      OCR CONFIG
 ════════════════ -->
+
 <div class="screen" id="screen-ocr-config">
   <header class="hdr">
     <div class="logo" onclick="safeGoHome()" title="Back to Home"><div class="logo-icon">🔥</div><span class="logo-wordmark">PDF<span class="yre">yre</span></span></div>
@@ -1074,97 +1082,101 @@ input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
       </div>
     </div>
 
-    <!-- PAGE RANGE -->
-    <div class="sec-lbl">Page Range</div>
-    <div class="page-range-card">
-      <div class="page-range-row">
-        <label>From page</label>
-        <div style="display:flex;align-items:center;gap:7px">
-          <input type="number" class="pg-inp" id="pg-from" value="1" min="1">
-          <span class="range-sep">to</span>
-          <input type="number" class="pg-inp" id="pg-to" value="—" min="1">
-        </div>
-        <span class="range-hint" id="range-hint">— pages selected</span>
-      </div>
-      <div class="preset-btns">
-        <button class="preset-btn" onclick="setAllPages()">All Pages</button>
-        <button class="preset-btn" onclick="setPreset('first10')">First 10</button>
-        <button class="preset-btn" onclick="setPreset('last10')">Last 10</button>
-        <button class="preset-btn" onclick="setPreset('half1')">First Half</button>
-        <button class="preset-btn" onclick="setPreset('half2')">Second Half</button>
-        <button class="preset-btn" onclick="setPreset('first1')">First Page Only</button>
-      </div>
+```
+<!-- PAGE RANGE -->
+<div class="sec-lbl">Page Range</div>
+<div class="page-range-card">
+  <div class="page-range-row">
+    <label>From page</label>
+    <div style="display:flex;align-items:center;gap:7px">
+      <input type="number" class="pg-inp" id="pg-from" value="1" min="1">
+      <span class="range-sep">to</span>
+      <input type="number" class="pg-inp" id="pg-to" value="—" min="1">
     </div>
+    <span class="range-hint" id="range-hint">— pages selected</span>
+  </div>
+  <div class="preset-btns">
+    <button class="preset-btn" onclick="setAllPages()">All Pages</button>
+    <button class="preset-btn" onclick="setPreset('first10')">First 10</button>
+    <button class="preset-btn" onclick="setPreset('last10')">Last 10</button>
+    <button class="preset-btn" onclick="setPreset('half1')">First Half</button>
+    <button class="preset-btn" onclick="setPreset('half2')">Second Half</button>
+    <button class="preset-btn" onclick="setPreset('first1')">First Page Only</button>
+  </div>
+</div>
 
-    <!-- OCR MODE -->
-    <div class="sec-lbl">OCR Quality Mode</div>
-    <div class="mode-grid" id="mode-grid">
-      <div class="mode-card" data-mode="fast"><div class="mode-icon">⚡</div><div class="mode-name">Fast</div><div class="mode-desc">Clean typed docs</div><span class="mode-tag mt-fast">150 DPI</span></div>
-      <div class="mode-card sel" data-mode="balanced"><div class="mode-icon">⚖️</div><div class="mode-name">Balanced</div><div class="mode-desc">Best default</div><span class="mode-tag mt-bal">200 DPI</span></div>
-      <div class="mode-card" data-mode="high"><div class="mode-icon">🎯</div><div class="mode-name">High Quality</div><div class="mode-desc">Complex layouts</div><span class="mode-tag mt-hi">250 DPI</span></div>
-      <div class="mode-card" data-mode="max"><div class="mode-icon">💎</div><div class="mode-name">Max Quality</div><div class="mode-desc">Poor scans</div><span class="mode-tag mt-max">300 DPI</span></div>
-      <div class="mode-card" data-mode="lossless"><div class="mode-icon">🔒</div><div class="mode-name">Lossless</div><div class="mode-desc">PNG, no compress</div><span class="mode-tag mt-loss">PNG</span></div>
-    </div>
+<!-- OCR MODE -->
+<div class="sec-lbl">OCR Quality Mode</div>
+<div class="mode-grid" id="mode-grid">
+  <div class="mode-card" data-mode="fast"><div class="mode-icon">⚡</div><div class="mode-name">Fast</div><div class="mode-desc">Clean typed docs</div><span class="mode-tag mt-fast">150 DPI</span></div>
+  <div class="mode-card sel" data-mode="balanced"><div class="mode-icon">⚖️</div><div class="mode-name">Balanced</div><div class="mode-desc">Best default</div><span class="mode-tag mt-bal">200 DPI</span></div>
+  <div class="mode-card" data-mode="high"><div class="mode-icon">🎯</div><div class="mode-name">High Quality</div><div class="mode-desc">Complex layouts</div><span class="mode-tag mt-hi">250 DPI</span></div>
+  <div class="mode-card" data-mode="max"><div class="mode-icon">💎</div><div class="mode-name">Max Quality</div><div class="mode-desc">Poor scans</div><span class="mode-tag mt-max">300 DPI</span></div>
+  <div class="mode-card" data-mode="lossless"><div class="mode-icon">🔒</div><div class="mode-name">Lossless</div><div class="mode-desc">PNG, no compress</div><span class="mode-tag mt-loss">PNG</span></div>
+</div>
 
-    <!-- LANGUAGE -->
-    <div class="sec-lbl">Recognition Language</div>
-    <select class="lang-sel" id="lang-sel">
-      <option value="eng">🇬🇧 English</option><option value="ara">🇸🇦 Arabic</option>
-      <option value="chi_sim">🇨🇳 Chinese (Simplified)</option><option value="chi_tra">🇹🇼 Chinese (Traditional)</option>
-      <option value="ces">🇨🇿 Czech</option><option value="dan">🇩🇰 Danish</option>
-      <option value="nld">🇳🇱 Dutch</option><option value="fin">🇫🇮 Finnish</option>
-      <option value="fra">🇫🇷 French</option><option value="deu">🇩🇪 German</option>
-      <option value="ell">🇬🇷 Greek</option><option value="heb">🇮🇱 Hebrew</option>
-      <option value="hin">🇮🇳 Hindi</option><option value="hun">🇭🇺 Hungarian</option>
-      <option value="ind">🇮🇩 Indonesian</option><option value="ita">🇮🇹 Italian</option>
-      <option value="jpn">🇯🇵 Japanese</option><option value="kor">🇰🇷 Korean</option>
-      <option value="nor">🇳🇴 Norwegian</option><option value="pol">🇵🇱 Polish</option>
-      <option value="por">🇵🇹 Portuguese</option><option value="ron">🇷🇴 Romanian</option>
-      <option value="rus">🇷🇺 Russian</option><option value="spa">🇪🇸 Spanish</option>
-      <option value="swe">🇸🇪 Swedish</option><option value="tha">🇹🇭 Thai</option>
-      <option value="tur">🇹🇷 Turkish</option><option value="ukr">🇺🇦 Ukrainian</option>
-      <option value="vie">🇻🇳 Vietnamese</option>
-      <option value="eng+fra">English + French</option><option value="eng+deu">English + German</option>
-      <option value="eng+spa">English + Spanish</option><option value="eng+ara">English + Arabic</option>
-      <option value="eng+rus">English + Russian</option><option value="eng+chi_sim">English + Chinese</option>
-      <option value="eng+jpn">English + Japanese</option><option value="eng+hin">English + Hindi</option>
-    </select>
+<!-- LANGUAGE -->
+<div class="sec-lbl">Recognition Language</div>
+<select class="lang-sel" id="lang-sel">
+  <option value="eng">🇬🇧 English</option><option value="ara">🇸🇦 Arabic</option>
+  <option value="chi_sim">🇨🇳 Chinese (Simplified)</option><option value="chi_tra">🇹🇼 Chinese (Traditional)</option>
+  <option value="ces">🇨🇿 Czech</option><option value="dan">🇩🇰 Danish</option>
+  <option value="nld">🇳🇱 Dutch</option><option value="fin">🇫🇮 Finnish</option>
+  <option value="fra">🇫🇷 French</option><option value="deu">🇩🇪 German</option>
+  <option value="ell">🇬🇷 Greek</option><option value="heb">🇮🇱 Hebrew</option>
+  <option value="hin">🇮🇳 Hindi</option><option value="hun">🇭🇺 Hungarian</option>
+  <option value="ind">🇮🇩 Indonesian</option><option value="ita">🇮🇹 Italian</option>
+  <option value="jpn">🇯🇵 Japanese</option><option value="kor">🇰🇷 Korean</option>
+  <option value="nor">🇳🇴 Norwegian</option><option value="pol">🇵🇱 Polish</option>
+  <option value="por">🇵🇹 Portuguese</option><option value="ron">🇷🇴 Romanian</option>
+  <option value="rus">🇷🇺 Russian</option><option value="spa">🇪🇸 Spanish</option>
+  <option value="swe">🇸🇪 Swedish</option><option value="tha">🇹🇭 Thai</option>
+  <option value="tur">🇹🇷 Turkish</option><option value="ukr">🇺🇦 Ukrainian</option>
+  <option value="vie">🇻🇳 Vietnamese</option>
+  <option value="eng+fra">English + French</option><option value="eng+deu">English + German</option>
+  <option value="eng+spa">English + Spanish</option><option value="eng+ara">English + Arabic</option>
+  <option value="eng+rus">English + Russian</option><option value="eng+chi_sim">English + Chinese</option>
+  <option value="eng+jpn">English + Japanese</option><option value="eng+hin">English + Hindi</option>
+</select>
 
-    <!-- PREPROCESSING -->
-    <div class="adv-toggle" id="adv-toggle" onclick="toggleAdv()">
-      <span class="adv-arrow">▶</span> Advanced Options &amp; Preprocessing
-    </div>
-    <div class="adv-panel" id="adv-panel">
-      <div class="pre-grid" style="margin:11px 0 16px">
-        <div class="tog" style="opacity:.55;cursor:not-allowed" title="Coming soon"><div class="tog-sw"></div>📐 Deskew pages &nbsp;<span style="font-family:var(--mono);font-size:.57rem;background:rgba(139,139,158,.15);color:var(--text-3);padding:2px 6px;border-radius:3px;letter-spacing:.04em">SOON</span></div>
-        <div class="tog" data-key="denoise"  onclick="togglePre(this)"><div class="tog-sw"></div>🧹 Remove noise</div>
-        <div class="tog" data-key="binarize" onclick="togglePre(this)"><div class="tog-sw"></div>⬛ Binarize (B&amp;W)</div>
-        <div class="tog" data-key="contrast" onclick="togglePre(this)"><div class="tog-sw"></div>☀️ Enhance contrast</div>
-        <div class="tog" data-key="sharpen"  onclick="togglePre(this)"><div class="tog-sw"></div>🔍 Sharpen edges</div>
-        <div class="tog on" data-key="optimize" onclick="togglePre(this)"><div class="tog-sw"></div>📦 Optimize output (JPEG)</div>
-      </div>
-      <div class="range-grp">
-        <div class="range-lbl"><span>Pages per batch</span><span class="range-val" id="batch-val">4</span></div>
-        <input type="range" min="1" max="8" value="4" id="batch-size" oninput="document.getElementById('batch-val').textContent=this.value">
-      </div>
-      <div class="range-grp">
-        <div class="range-lbl"><span>Min word confidence</span><span class="range-val" id="conf-val">30%</span></div>
-        <input type="range" min="0" max="80" value="30" id="conf-thr" oninput="document.getElementById('conf-val').textContent=this.value+'%'">
-      </div>
-    </div>
+<!-- PREPROCESSING -->
+<div class="adv-toggle" id="adv-toggle" onclick="toggleAdv()">
+  <span class="adv-arrow">▶</span> Advanced Options &amp; Preprocessing
+</div>
+<div class="adv-panel" id="adv-panel">
+  <div class="pre-grid" style="margin:11px 0 16px">
+    <div class="tog" style="opacity:.55;cursor:not-allowed" title="Coming soon"><div class="tog-sw"></div>📐 Deskew pages &nbsp;<span style="font-family:var(--mono);font-size:.57rem;background:rgba(139,139,158,.15);color:var(--text-3);padding:2px 6px;border-radius:3px;letter-spacing:.04em">SOON</span></div>
+    <div class="tog" data-key="denoise"  onclick="togglePre(this)"><div class="tog-sw"></div>🧹 Remove noise</div>
+    <div class="tog" data-key="binarize" onclick="togglePre(this)"><div class="tog-sw"></div>⬛ Binarize (B&amp;W)</div>
+    <div class="tog" data-key="contrast" onclick="togglePre(this)"><div class="tog-sw"></div>☀️ Enhance contrast</div>
+    <div class="tog" data-key="sharpen"  onclick="togglePre(this)"><div class="tog-sw"></div>🔍 Sharpen edges</div>
+    <div class="tog on" data-key="optimize" onclick="togglePre(this)"><div class="tog-sw"></div>📦 Optimize output (JPEG)</div>
+  </div>
+  <div class="range-grp">
+    <div class="range-lbl"><span>Pages per batch</span><span class="range-val" id="batch-val">4</span></div>
+    <input type="range" min="1" max="8" value="4" id="batch-size" oninput="document.getElementById('batch-val').textContent=this.value">
+  </div>
+  <div class="range-grp">
+    <div class="range-lbl"><span>Min word confidence</span><span class="range-val" id="conf-val">30%</span></div>
+    <input type="range" min="0" max="80" value="30" id="conf-thr" oninput="document.getElementById('conf-val').textContent=this.value+'%'">
+  </div>
+</div>
 
-    <div class="divider"></div>
-    <div class="cfg-actions">
-      <button class="btn btn-secondary" onclick="showScreen('ocr-upload')">← Change File</button>
-      <button class="btn btn-fire btn-lg" onclick="startOCR()">▶ Start OCR</button>
-      <span style="font-size:.71rem;color:var(--text-3);margin-left:auto">All processing is local</span>
-    </div>
+<div class="divider"></div>
+<div class="cfg-actions">
+  <button class="btn btn-secondary" onclick="showScreen('ocr-upload')">← Change File</button>
+  <button class="btn btn-fire btn-lg" onclick="startOCR()">▶ Start OCR</button>
+  <span style="font-size:.71rem;color:var(--text-3);margin-left:auto">All processing is local</span>
+</div>
+```
+
   </div>
 </div>
 
 <!-- ════════════════
      OCR PROCESSING
 ════════════════ -->
+
 <div class="screen" id="screen-ocr-processing">
   <header class="hdr">
     <div class="logo" onclick="safeGoHome()" title="Back to Home"><div class="logo-icon">🔥</div><span class="logo-wordmark">PDF<span class="yre">yre</span></span></div>
@@ -1213,6 +1225,7 @@ input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
 <!-- ════════════════
      OCR RESULT
 ════════════════ -->
+
 <div class="screen" id="screen-ocr-result">
   <header class="hdr">
     <div class="logo" onclick="safeGoHome()" title="Back to Home"><div class="logo-icon">🔥</div><span class="logo-wordmark">PDF<span class="yre">yre</span></span></div>
@@ -1228,63 +1241,67 @@ input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
       <p>Text layer embedded and aligned to your document. Fully searchable in any PDF reader.</p>
     </div>
 
-    <div class="size-warning" id="size-warning">
-      ⚠️ <span id="size-warning-msg">Output is larger than expected.</span>
-    </div>
+```
+<div class="size-warning" id="size-warning">
+  ⚠️ <span id="size-warning-msg">Output is larger than expected.</span>
+</div>
 
-    <div class="result-stats">
-      <div class="rs"><div class="rv" id="res-pages">0</div><div class="rl">Pages</div></div>
-      <div class="rs"><div class="rv" id="res-words">0</div><div class="rl">Words</div></div>
-      <div class="rs"><div class="rv" id="res-conf">0%</div><div class="rl">Confidence</div></div>
-      <div class="rs"><div class="rv" id="res-size">—</div><div class="rl">Output Size</div></div>
-    </div>
+<div class="result-stats">
+  <div class="rs"><div class="rv" id="res-pages">0</div><div class="rl">Pages</div></div>
+  <div class="rs"><div class="rv" id="res-words">0</div><div class="rl">Words</div></div>
+  <div class="rs"><div class="rv" id="res-conf">0%</div><div class="rl">Confidence</div></div>
+  <div class="rs"><div class="rv" id="res-size">—</div><div class="rl">Output Size</div></div>
+</div>
 
-    <div class="result-dl-row">
-      <button class="btn btn-fire btn-xl" onclick="downloadPDF()">⬇ Download PDF</button>
-      <button class="btn btn-secondary btn-xl" onclick="downloadTxt()">📄 Download .txt</button>
-    </div>
-    <button class="btn btn-secondary btn-xl" style="margin-bottom:14px" onclick="processNew()">Process Another File</button>
-    <button class="btn btn-ghost btn-xl" onclick="showScreen('home')" style="margin-bottom:14px">← Back to All Tools</button>
+<div class="result-dl-row">
+  <button class="btn btn-fire btn-xl" onclick="downloadPDF()">⬇ Download PDF</button>
+  <button class="btn btn-secondary btn-xl" onclick="downloadTxt()">📄 Download .txt</button>
+</div>
+<button class="btn btn-secondary btn-xl" style="margin-bottom:14px" onclick="processNew()">Process Another File</button>
+<button class="btn btn-ghost btn-xl" onclick="showScreen('home')" style="margin-bottom:14px">← Back to All Tools</button>
 
-    <!-- ADSENSE: results page — uncomment after AdSense approval
-    <div style="display:flex;justify-content:center;margin:16px 0">
-      <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0000000004"></ins>
-      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-    </div> -->
+<!-- ADSENSE: results page — uncomment after AdSense approval
+<div style="display:flex;justify-content:center;margin:16px 0">
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0000000004"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div> -->
 
-    <!-- TEXT PREVIEW -->
-    <div class="text-preview-card" id="text-preview-card">
-      <div class="text-preview-hdr" onclick="toggleTextPreview()">
-        <span>📋 Extracted Text Preview</span>
-        <span id="tp-arrow">▼</span>
-      </div>
-      <div class="text-preview-body" id="text-preview-body"></div>
-      <div class="text-preview-actions" id="text-preview-actions">
-        <button class="btn btn-secondary" onclick="copyAllText()" style="padding:8px 14px;font-size:.8rem">📋 Copy All Text</button>
-        <button class="btn btn-secondary" onclick="downloadTxt()" style="padding:8px 14px;font-size:.8rem">⬇ Download .txt</button>
-      </div>
-    </div>
+<!-- TEXT PREVIEW -->
+<div class="text-preview-card" id="text-preview-card">
+  <div class="text-preview-hdr" onclick="toggleTextPreview()">
+    <span>📋 Extracted Text Preview</span>
+    <span id="tp-arrow">▼</span>
+  </div>
+  <div class="text-preview-body" id="text-preview-body"></div>
+  <div class="text-preview-actions" id="text-preview-actions">
+    <button class="btn btn-secondary" onclick="copyAllText()" style="padding:8px 14px;font-size:.8rem">📋 Copy All Text</button>
+    <button class="btn btn-secondary" onclick="downloadTxt()" style="padding:8px 14px;font-size:.8rem">⬇ Download .txt</button>
+  </div>
+</div>
 
-    <div class="report-card">
-      <div class="report-hdr" onclick="toggleReport()"><span>Processing Report</span><span id="rpt-arrow">▼</span></div>
-      <div class="report-rows" id="rpt-body" style="display:none"></div>
-    </div>
-    <div style="text-align:center;margin-top:22px;font-size:.71rem;color:var(--text-3)">
-      PDFyre · browser-based · zero uploads · free forever<br>
-      <span style="display:inline-flex;gap:14px;margin-top:6px;flex-wrap:wrap;justify-content:center">
-        <a href="guides.html" style="color:var(--text-3);text-decoration:none">Guides</a>
-        <a href="about.html" style="color:var(--text-3);text-decoration:none">About</a>
-        <a href="privacy.html" style="color:var(--text-3);text-decoration:none">Privacy Policy</a>
-        <a href="terms.html" style="color:var(--text-3);text-decoration:none">Terms</a>
-        <a href="mailto:wisemindsviral@gmail.com" style="color:var(--text-3);text-decoration:none">Contact</a>
-      </span>
-    </div>
+<div class="report-card">
+  <div class="report-hdr" onclick="toggleReport()"><span>Processing Report</span><span id="rpt-arrow">▼</span></div>
+  <div class="report-rows" id="rpt-body" style="display:none"></div>
+</div>
+<div style="text-align:center;margin-top:22px;font-size:.71rem;color:var(--text-3)">
+  PDFyre · browser-based · zero uploads · free forever<br>
+  <span style="display:inline-flex;gap:14px;margin-top:6px;flex-wrap:wrap;justify-content:center">
+    <a href="guides.html" style="color:var(--text-3);text-decoration:none">Guides</a>
+    <a href="about.html" style="color:var(--text-3);text-decoration:none">About</a>
+    <a href="privacy.html" style="color:var(--text-3);text-decoration:none">Privacy Policy</a>
+    <a href="terms.html" style="color:var(--text-3);text-decoration:none">Terms</a>
+    <a href="mailto:wisemindsviral@gmail.com" style="color:var(--text-3);text-decoration:none">Contact</a>
+  </span>
+</div>
+```
+
   </div>
 </div>
 
 <!-- ════════════════
      MERGE
 ════════════════ -->
+
 <div class="screen" id="screen-merge">
   <header class="hdr">
     <div class="logo" onclick="safeGoHome()" title="Back to Home"><div class="logo-icon">🔥</div><span class="logo-wordmark">PDF<span class="yre">yre</span></span></div>
@@ -1329,6 +1346,7 @@ input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
 <!-- ════════════════
      SPLIT
 ════════════════ -->
+
 <div class="screen" id="screen-split">
   <header class="hdr">
     <div class="logo" onclick="safeGoHome()" title="Back to Home"><div class="logo-icon">🔥</div><span class="logo-wordmark">PDF<span class="yre">yre</span></span></div>
@@ -1376,6 +1394,7 @@ input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
 <!-- ════════════════
      COMPRESS
 ════════════════ -->
+
 <div class="screen" id="screen-compress">
   <header class="hdr">
     <div class="logo" onclick="safeGoHome()" title="Back to Home"><div class="logo-icon">🔥</div><span class="logo-wordmark">PDF<span class="yre">yre</span></span></div>
@@ -1429,6 +1448,7 @@ input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
 <!-- ════════════════
      PDF TO IMAGES
 ════════════════ -->
+
 <div class="screen" id="screen-pdf2img">
   <header class="hdr">
     <div class="logo" onclick="safeGoHome()" title="Back to Home"><div class="logo-icon">🔥</div><span class="logo-wordmark">PDF<span class="yre">yre</span></span></div>
@@ -1490,6 +1510,7 @@ input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
 <!-- ════════════════
      IMAGES TO PDF
 ════════════════ -->
+
 <div class="screen" id="screen-img2pdf">
   <header class="hdr">
     <div class="logo" onclick="safeGoHome()" title="Back to Home"><div class="logo-icon">🔥</div><span class="logo-wordmark">PDF<span class="yre">yre</span></span></div>
@@ -1534,6 +1555,7 @@ input[type=range]{width:100%;accent-color:var(--fire);cursor:pointer}
 <!-- ════════════════
      ROTATE PDF
 ════════════════ -->
+
 <div class="screen" id="screen-rotate">
   <header class="hdr">
     <div class="logo" onclick="safeGoHome()" title="Back to Home"><div class="logo-icon">🔥</div><span class="logo-wordmark">PDF<span class="yre">yre</span></span></div>
@@ -1802,13 +1824,25 @@ const pool=new OCRPool();
 ═══════════════════════════════ */
 async function buildPDF(pages,onProg){
   const{PDFDocument,StandardFonts,rgb}=PDFLib;
-  const CHUNK=30; // pages per chunk — keeps RAM under control on phones
-  const chunkBytes=[];
+  const CHUNK=25;
+  const totalChunks=Math.ceil(pages.length/CHUNK);
   let built=0;
 
-  for(let c=0;c<pages.length;c+=CHUNK){
+  // Use dedicated IDB store for OCR build chunks
+  const BDB=await (()=>new Promise((res,rej)=>{
+    const r=indexedDB.open('pdfyre_build',1);
+    r.onupgradeneeded=e=>e.target.result.createObjectStore('b',{keyPath:'k'});
+    r.onsuccess=e=>res(e.target.result);
+    r.onerror=e=>rej(e.target.error);
+  }))();
+  const bPut=(k,v)=>new Promise((res,rej)=>{const tx=BDB.transaction('b','readwrite');tx.objectStore('b').put({k,v});tx.oncomplete=res;tx.onerror=e=>rej(e.target.error);});
+  const bGet=(k)=>new Promise((res,rej)=>{const tx=BDB.transaction('b','readonly');const r=tx.objectStore('b').get(k);r.onsuccess=()=>res(r.result?.v||null);r.onerror=e=>rej(e.target.error);});
+  const bDel=(k)=>new Promise(res=>{try{const tx=BDB.transaction('b','readwrite');tx.objectStore('b').delete(k);tx.oncomplete=res;}catch{res();}});
+
+  // Phase 1 — build chunks, save to IDB
+  for(let c=0;c<totalChunks;c++){
     if(S.cancelled)break;
-    const slice=pages.slice(c,c+CHUNK);
+    const slice=pages.slice(c*CHUNK,(c+1)*CHUNK);
     const chunkDoc=await PDFDocument.create();
     chunkDoc.setProducer('PDFyre (pdfyre.xyz)');
     let font;try{font=await chunkDoc.embedFont(StandardFonts.Helvetica);}catch{}
@@ -1819,20 +1853,15 @@ async function buildPDF(pages,onProg){
       try{
         const{imgBytes,isJpeg,words,cW,cH,pdfW,pdfH,skipped}=pd;
         const page=chunkDoc.addPage([pdfW,pdfH]);
-        // STEP 1: Text layer first (invisible, searchable)
         if(!skipped&&font&&words?.length){
           const sx=pdfW/cW,sy=pdfH/cH;
           for(const wd of words){
-            if(!wd.text?.trim())continue;
-            if(wd.confidence<S.confThr)continue;
+            if(!wd.text?.trim()||wd.confidence<S.confThr)continue;
             const bW=(wd.bbox.x1-wd.bbox.x0)*sx,bH=(wd.bbox.y1-wd.bbox.y0)*sy;
             if(bH<1||bW<1)continue;
-            const x=wd.bbox.x0*sx;
-            const y=pdfH-(wd.bbox.y1*sy);
-            try{page.drawText(wd.text,{x,y,size:Math.max(1,Math.round(bH)),font,color:rgb(1,1,1),opacity:0});}catch{}
+            try{page.drawText(wd.text,{x:wd.bbox.x0*sx,y:pdfH-(wd.bbox.y1*sy),size:Math.max(1,Math.round(bH)),font,color:rgb(1,1,1),opacity:0});}catch{}
           }
         }
-        // STEP 2: Image on top (covers text visually)
         if(imgBytes&&imgBytes.length>0){
           let img=null;
           try{img=isJpeg?await chunkDoc.embedJpg(imgBytes):await chunkDoc.embedPng(imgBytes);}
@@ -1840,28 +1869,32 @@ async function buildPDF(pages,onProg){
           if(img)page.drawImage(img,{x:0,y:0,width:pdfW,height:pdfH});
         }
         built++;onProg&&onProg(built,pages.length);
-      }catch(e){plog(`Page assembly error: ${e.message}`,'e');built++;}
+      }catch(e){plog(`Page build error: ${e.message}`,'e');built++;}
     }
 
-    // Save chunk and release from RAM
+    // Save to IDB, NOT a RAM array
     const cb=await chunkDoc.save();
-    chunkBytes.push(cb);
-    plog(`Chunk ${chunkBytes.length} saved (${fmtBytes(cb.byteLength)})`,'i');
-    // Yield to browser
-    await new Promise(r=>setTimeout(r,30));
+    await bPut('bchunk_'+c, cb);
+    plog(`Build chunk ${c+1}/${totalChunks} saved (${fmtBytes(cb.byteLength)})`,'i');
+    await new Promise(r=>setTimeout(r,50)); // yield/breathe
   }
 
-  // Merge all chunks into final PDF
-  plog(`Merging ${chunkBytes.length} chunk(s)…`,'i');
+  // Phase 2 — merge from IDB one chunk at a time
+  plog(`Merging ${totalChunks} build chunk(s)…`,'i');
   const finalDoc=await PDFDocument.create();
   finalDoc.setTitle((S.file?.name||'Document').replace(/\.pdf$/i,'')+' — Searchable');
   finalDoc.setProducer('PDFyre (pdfyre.xyz)');finalDoc.setCreator('PDFyre');
   finalDoc.setCreationDate(new Date());finalDoc.setModificationDate(new Date());
-  for(const cb of chunkBytes){
+
+  for(let c=0;c<totalChunks;c++){
+    if(S.cancelled)break;
+    const cb=await bGet('bchunk_'+c);
+    if(!cb)continue;
     const src=await PDFDocument.load(cb,{ignoreEncryption:true});
-    const indices=src.getPageIndices();
-    const copied=await finalDoc.copyPages(src,indices);
+    const copied=await finalDoc.copyPages(src,src.getPageIndices());
     copied.forEach(p=>finalDoc.addPage(p));
+    await bDel('bchunk_'+c); // free IDB immediately
+    await new Promise(r=>setTimeout(r,30));
   }
 
   plog(`Assembled ${built} pages`,'s');
@@ -2262,28 +2295,37 @@ function resetCompress(){
 async function runCompress(){
   if(!CS.pdfDoc){notify('No PDF loaded','e');return;}
   const lvl=COMPRESS_LEVELS[CS.level];
-  const prog=document.getElementById('compress-progress');const bar=document.getElementById('compress-bar');const txt=document.getElementById('compress-prog-txt');
+  const prog=document.getElementById('compress-progress');
+  const bar=document.getElementById('compress-bar');
+  const txt=document.getElementById('compress-prog-txt');
   const act=document.getElementById('compress-actions');
   prog.classList.add('show');if(act)act.style.display='none';
   _processing=true;
 
-  // Chunk size — 25 pages per chunk keeps RAM under control even on phones
-  const CHUNK=25;
-  const chunkBytes=[];
+  const CHUNK=20;
+  const totalChunks=Math.ceil(CS.totalPages/CHUNK);
+  // Use a dedicated IDB store for compress chunks
+  const CDB=await (()=>new Promise((res,rej)=>{
+    const r=indexedDB.open('pdfyre_compress',1);
+    r.onupgradeneeded=e=>e.target.result.createObjectStore('c',{keyPath:'k'});
+    r.onsuccess=e=>res(e.target.result);
+    r.onerror=e=>rej(e.target.error);
+  }))();
+  const cdbPut=(k,v)=>new Promise((res,rej)=>{const tx=CDB.transaction('c','readwrite');tx.objectStore('c').put({k,v});tx.oncomplete=res;tx.onerror=e=>rej(e.target.error);});
+  const cdbGet=(k)=>new Promise((res,rej)=>{const tx=CDB.transaction('c','readonly');const r=tx.objectStore('c').get(k);r.onsuccess=()=>res(r.result?.v||null);r.onerror=e=>rej(e.target.error);});
+  const cdbDel=(k)=>new Promise((res)=>{try{const tx=CDB.transaction('c','readwrite');tx.objectStore('c').delete(k);tx.oncomplete=res;}catch{res();}});
 
   try{
     const{PDFDocument}=PDFLib;
-    const totalChunks=Math.ceil(CS.totalPages/CHUNK);
 
+    // Phase 1 — render each chunk and save to IDB (NOT RAM)
     for(let c=0;c<totalChunks;c++){
       const from=c*CHUNK, to=Math.min(from+CHUNK, CS.totalPages);
-      if(txt)txt.textContent=`Chunk ${c+1}/${totalChunks}: pages ${from+1}–${to}…`;
+      if(txt)txt.textContent=`Compressing pages ${from+1}–${to} of ${CS.totalPages}…`;
 
-      // Build a mini PDF for this chunk
       const chunkDoc=await PDFDocument.create();
-
       for(let i=from;i<to;i++){
-        if(bar)bar.style.width=Math.round((i/CS.totalPages)*85)+'%';
+        if(bar)bar.style.width=Math.round((i/CS.totalPages)*80)+'%';
         const pdfPage=await CS.pdfDoc.getPage(i+1);
         const scale=lvl.dpi/72,vp=pdfPage.getViewport({scale});
         const cvs=document.createElement('canvas');
@@ -2292,47 +2334,60 @@ async function runCompress(){
         ctx.fillStyle='#fff';ctx.fillRect(0,0,cvs.width,cvs.height);
         await pdfPage.render({canvasContext:ctx,viewport:vp}).promise;
         const du=cvs.toDataURL('image/jpeg',lvl.q);
-        // Free canvas immediately
-        cvs.width=cvs.height=0;
+        cvs.width=cvs.height=0; // free canvas NOW
         const rs=await fetch(du);
         const imgBytes=new Uint8Array(await rs.arrayBuffer());
         const page=chunkDoc.addPage([vp.width/scale,vp.height/scale]);
-        try{
-          const img=await chunkDoc.embedJpg(imgBytes);
-          page.drawImage(img,{x:0,y:0,width:vp.width/scale,height:vp.height/scale});
-        }catch{}
+        try{const img=await chunkDoc.embedJpg(imgBytes);page.drawImage(img,{x:0,y:0,width:vp.width/scale,height:vp.height/scale});}catch{}
       }
 
-      // Save chunk → store bytes → release chunk from RAM
+      // Save to IDB — NOT a RAM array
       const cb=await chunkDoc.save();
-      chunkBytes.push(cb);
-      // Yield to browser to breathe
-      await new Promise(r=>setTimeout(r,50));
+      await cdbPut('chunk_'+c, cb);
+      // Explicitly release everything
+      chunkDoc.context.enumerateIndirectObjects().length; // flush internal refs
+      await new Promise(r=>setTimeout(r,80)); // breathe
     }
 
-    // Merge all chunks
+    // Phase 2 — merge chunks from IDB one at a time
     if(txt)txt.textContent=`Merging ${totalChunks} chunk(s)…`;
-    if(bar)bar.style.width='90%';
+    if(bar)bar.style.width='85%';
+
     const finalDoc=await PDFDocument.create();
-    finalDoc.setProducer('PDFyre Compress');finalDoc.setCreationDate(new Date());
-    for(const cb of chunkBytes){
+    finalDoc.setProducer('PDFyre Compress');
+    finalDoc.setCreationDate(new Date());
+
+    for(let c=0;c<totalChunks;c++){
+      if(txt)txt.textContent=`Merging chunk ${c+1}/${totalChunks}…`;
+      const cb=await cdbGet('chunk_'+c);
+      if(!cb)continue;
       const src=await PDFDocument.load(cb,{ignoreEncryption:true});
-      const indices=src.getPageIndices();
-      const pages=await finalDoc.copyPages(src,indices);
+      const pages=await finalDoc.copyPages(src,src.getPageIndices());
       pages.forEach(p=>finalDoc.addPage(p));
+      await cdbDel('chunk_'+c); // free IDB space immediately
+      await new Promise(r=>setTimeout(r,30));
     }
 
-    if(txt)txt.textContent='Saving…';if(bar)bar.style.width='98%';
+    if(txt)txt.textContent='Saving…';if(bar)bar.style.width='95%';
     CS.outputBytes=await finalDoc.save();
-    if(bar)bar.style.width='100%';_processing=false;
+    if(bar)bar.style.width='100%';
+    _processing=false;
+
     const ratio=((1-(CS.outputBytes.byteLength/CS.file.size))*100).toFixed(1);
-    const res=document.getElementById('compress-result');
     document.getElementById('compress-result-desc').textContent=
       `${fmtBytes(CS.file.size)} → ${fmtBytes(CS.outputBytes.byteLength)} · ${ratio>0?'-'+ratio+'% smaller':'+'+(Math.abs(ratio))+'% larger (text PDF — compression not applicable)'}`;
-    res.classList.add('show');prog.classList.remove('show');
+    document.getElementById('compress-result').classList.add('show');
+    prog.classList.remove('show');
     if(act)act.style.display='flex';
     notify('Compression complete!','s');
-  }catch(e){_processing=false;notify('Compress failed: '+e.message,'e');prog.classList.remove('show');if(act)act.style.display='flex';}
+  }catch(e){
+    _processing=false;
+    notify('Compress failed: '+e.message,'e');
+    prog.classList.remove('show');
+    if(act)act.style.display='flex';
+    // Clean up IDB on error
+    for(let c=0;c<totalChunks;c++)await cdbDel('chunk_'+c).catch(()=>{});
+  }
 }
 function downloadCompressed(){
   if(!CS.outputBytes){notify('No output','e');return;}
@@ -2952,5 +3007,6 @@ async function init(){
 }
 init();
 </script>
+
 </body>
 </html>
