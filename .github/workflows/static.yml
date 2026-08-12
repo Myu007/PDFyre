@@ -30,14 +30,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
+      - name: Stage deployable site
+        shell: bash
+        run: |
+          mkdir -p _site
+          cp index.html about.html privacy.html terms.html 404.html guides.html \
+             what-is-ocr.html how-to-make-pdf-searchable.html how-to-compress-pdf.html \
+             how-to-merge-pdf.html how-to-split-pdf.html pdf-tools-guide.html \
+             robots.txt sitemap.xml _site/
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
-          # Upload entire repository
-          path: '.'
+          # Only the staged site — backups and dev files never ship
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
