@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCDN05EX02"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',personalization_storage:'granted',security_storage:'granted',wait_for_update:500});
+  gtag('js', new Date());
+  gtag('config', 'G-VCDN05EX02');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — PDFyre</title>
+<meta name="description" content="About PDFyre — free browser-based PDF tools. OCR, Merge, Split, Compress. Built for privacy. No uploads ever.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://pdfyre.xyz/about.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<!-- Google AdSense loads dynamically after cookie consent -->
+
+<style>
+:root{
+  --bg:#07080d;--surface:#0d0f18;--card:#131520;--card-hi:#1a1d2e;
+  --border:#1e2133;--border-hi:#2e3350;
+  --fire:#ff6b1f;--fire-2:#ff8c42;--fire-dim:#c24c10;
+  --fire-glow:rgba(255,107,31,.13);
+  --teal:#38d9c0;--green:#3dd68c;--blue:#5b9cf6;
+  --text:#e4e6f0;--text-2:#8890b8;--text-3:#4a5070;
+  --font:'DM Sans',sans-serif;--mono:'DM Mono',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:
+    radial-gradient(circle at 80% 20%,rgba(255,107,31,.05) 0%,transparent 50%),
+    linear-gradient(var(--border) 1px,transparent 1px),
+    linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:auto,48px 48px,48px 48px;opacity:.45;pointer-events:none;z-index:0;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 24px;border-bottom:1px solid var(--border);
+  background:rgba(7,8,13,.88);backdrop-filter:blur(20px);
+  position:sticky;top:0;z-index:100;
+}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:1.05rem;letter-spacing:-.03em;text-decoration:none;color:var(--text)}
+.logo-icon{width:28px;height:28px;background:linear-gradient(145deg,#ff8c42,#ff6b1f,#c24c10);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 2px 10px rgba(255,107,31,.35)}
+.logo-wordmark{letter-spacing:-.045em}
+.logo-wordmark .yre{color:#ff8c42}
+nav{display:flex;gap:6px}
+.nav-link{font-size:.8rem;color:var(--text-2);padding:5px 11px;border-radius:6px;text-decoration:none;transition:all .13s}
+.nav-link:hover{color:var(--text);background:var(--card)}
+main{padding:52px 0 80px}
+h1{font-size:2.2rem;font-weight:800;letter-spacing:-.05em;margin-bottom:10px;line-height:1.1}
+h1 em{font-style:normal;background:linear-gradient(90deg,#ff8c42,#38d9c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.lead{font-size:.97rem;color:var(--text-2);line-height:1.75;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--border);max-width:580px}
+h2{font-size:1.05rem;font-weight:700;margin:36px 0 12px}
+p{font-size:.87rem;color:var(--text-2);line-height:1.8;margin-bottom:12px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:16px 0 32px}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;transition:border-color .15s}
+.info-card:hover{border-color:var(--border-hi)}
+.info-card-icon{font-size:1.5rem;margin-bottom:10px}
+.info-card h3{font-size:.88rem;font-weight:700;margin-bottom:6px}
+.info-card p{font-size:.78rem;color:var(--text-2);line-height:1.6;margin-bottom:0}
+.tech-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:14px 0}
+.tech-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:9px;padding:14px 16px;
+  display:flex;align-items:flex-start;gap:11px;
+}
+.tech-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+.tech-name{font-size:.83rem;font-weight:700;margin-bottom:3px}
+.tech-desc{font-size:.74rem;color:var(--text-2);line-height:1.5}
+.cta-box{
+  background:linear-gradient(135deg,var(--fire-glow),rgba(56,217,192,.06));
+  border:1px solid rgba(255,107,31,.22);
+  border-radius:12px;padding:28px;text-align:center;margin-top:40px;
+}
+.cta-box h2{margin-top:0;margin-bottom:10px;font-size:1.15rem}
+.cta-box p{font-size:.85rem;color:var(--text-2);margin-bottom:18px}
+.btn-fire{
+  display:inline-flex;align-items:center;gap:7px;
+  background:linear-gradient(135deg,#ff8c42,#ff6b1f,#c24c10);
+  color:#fff;font-weight:700;font-size:.88rem;
+  padding:11px 24px;border-radius:8px;text-decoration:none;
+  box-shadow:0 2px 12px rgba(255,107,31,.3);
+  transition:all .16s;
+}
+.btn-fire:hover{transform:translateY(-1px);box-shadow:0 5px 22px rgba(255,107,31,.42)}
+footer{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:.74rem;color:var(--text-3)}
+footer a{color:var(--text-3);text-decoration:none;margin:0 8px}
+footer a:hover{color:var(--text-2)}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:var(--border-hi);border-radius:2px}
+#cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:10000;background:#14182a;border-top:1px solid #2e3350;padding:14px 18px;font-size:.82rem;color:#e4e6f0;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;box-shadow:0 -4px 18px rgba(0,0,0,.4)}
+#cookie-banner p{margin:0;flex:1 1 260px;line-height:1.45}
+#cookie-banner a{color:#ff8c42;text-decoration:underline}
+#cookie-banner .cb-btns{display:flex;gap:8px}
+#cookie-banner button{cursor:pointer;border:none;border-radius:7px;padding:8px 16px;font-size:.8rem;font-weight:600}
+#cookie-banner .cb-accept{background:#ff6b1f;color:#0d0f18}
+#cookie-banner .cb-decline{background:#1e2133;color:#e4e6f0;border:1px solid #2e3350}</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo"><span class="logo-icon">🔥</span><span class="logo-wordmark">PDF<span class="yre">yre</span></span></a>
+  <nav>
+    <a class="nav-link" href="index.html">Tools</a>
+    <a class="nav-link" href="guides.html">Guides</a>
+    <a class="nav-link" href="about.html">About</a>
+  </nav>
+</header>
+<div class="wrap">
+<main>
+  <h1>Why <em>PDFyre</em> exists</h1>
+  <p class="lead">PDFyre started with a very personal problem: an 890-page medical textbook that had been scanned into a PDF and could not be searched. Every word I needed to find was trapped inside images, and no free online tool would touch a file that big — let alone keep it private.</p>
+
+  <h2>The story</h2>
+  <p>I'm a medical student. My life is PDFs — lecture slides, textbooks, research papers, hospital forms. During exam season I got a scanned copy of a core textbook and hit a wall: I could not search it, copy from it, or jump to any topic. Ctrl+F found nothing, because there was no text in the file, only pictures of pages.</p>
+  <p>Online OCR tools had two problems. First, they capped file sizes, and my book was 132 MB — far over every limit I found. Second, they wanted me to upload a document full of personal notes and patient-related study material to a server I did not control. That was a non-starter.</p>
+  <p>So I built the tool I wished existed: OCR that runs entirely in the browser. The PDF is read, processed, and re-saved on your own device. Nothing is uploaded, ever — there is no server waiting to receive your files. The 890-page book that started all of this was the first file it processed successfully.</p>
+
+  <h2>What PDFyre stands for</h2>
+  <div class="card-grid">
+    <div class="info-card"><div class="info-card-icon">🔒</div><h3>Privacy first</h3><p>Every tool runs locally on your device. Your documents never leave your hands.</p></div>
+    <div class="info-card"><div class="info-card-icon">♾️</div><h3>No limits</h3><p>No file size caps, no queues, no account, no watermarks. If your device can handle it, PDFyre can.</p></div>
+    <div class="info-card"><div class="info-card-icon">🌍</div><h3>Works anywhere</h3><p>Open it in any modern browser on any device — no software to install, nothing to pay.</p></div>
+    <div class="info-card"><div class="info-card-icon">🆓</div><h3>Always free</h3><p>Every tool is free. The site is supported by advertising, not by selling access to your files.</p></div>
+  </div>
+
+  <h2>The tech behind it</h2>
+  <p>PDFyre uses open, battle-tested technology — PDF.js for reading and rendering PDFs, pdf-lib for building them, and Tesseract.js for OCR — all executed in your browser's own engine.</p>
+  <div class="tech-row">
+    <div class="tech-card"><div class="tech-icon">📄</div><div><div class="tech-name">PDF.js</div><div class="tech-desc">Reads and renders PDF pages with full fidelity.</div></div></div>
+    <div class="tech-card"><div class="tech-icon">🔤</div><div><div class="tech-name">Tesseract.js</div><div class="tech-desc">On-device OCR with per-language recognition.</div></div></div>
+    <div class="tech-card"><div class="tech-icon">🧩</div><div><div class="tech-name">pdf-lib</div><div class="tech-desc">Creates and manipulates the final PDFs.</div></div></div>
+  </div>
+
+  <div class="cta-box">
+    <h2>Built for people who just want it to work</h2>
+    <p>Try it with your own files — searchable, compressed, merged, split, all in your browser.</p>
+    <a href="index.html" class="btn-fire">🔥 Open PDFyre</a>
+  </div>
+</main>
+</div>
+<footer>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="guides.html">Guides</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>© 2026 PDFyre — Free, private, browser-only PDF tools.</p>
+</footer>
+<div id="cookie-banner" role="dialog" aria-label="Cookie consent"><p>PDFyre uses cookies to keep the site working, understand visits, and display ads. You can accept or decline advertising and analytics cookies. <a href="privacy.html">Read the Privacy Policy</a>.</p><div class="cb-btns"><button type="button" class="cb-accept" onclick="setConsent(1)">Accept</button><button type="button" class="cb-decline" onclick="setConsent(0)">Decline</button></div></div>
+<script>
+(function(){var K='pdfyre_consent';
+function update(c){if(!window.gtag)return;gtag('consent','update',{ad_storage:c?'granted':'denied',ad_user_data:c?'granted':'denied',ad_personalization:c?'granted':'denied',analytics_storage:c?'granted':'denied'});}
+window.setConsent=function(c){try{localStorage.setItem(K,c?'1':'0');}catch(e){}update(c);
+if(c){var L=document.getElementById('ads-script');if(!L){L=document.createElement('script');L.id='ads-script';L.async=true;L.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2592371402292335';L.crossOrigin='anonymous';document.head.appendChild(L);}}
+var b=document.getElementById('cookie-banner');if(b)b.style.display='none';};
+try{var v=localStorage.getItem(K);if(v!==null){window.setConsent(v==='1');}}catch(e){}
+})();
+</script>
+</body>
+</html>

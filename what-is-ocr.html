@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCDN05EX02"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',personalization_storage:'granted',security_storage:'granted',wait_for_update:500});
+  gtag('js', new Date());
+  gtag('config', 'G-VCDN05EX02');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is OCR? Complete Beginner's Guide — PDFyre</title>
+<meta name="description" content="What is Optical Character Recognition (OCR)? Learn how OCR works, why scanned PDFs need it, and how to use free browser-based OCR on any document.">
+<meta name="keywords" content="what is OCR, optical character recognition explained, OCR meaning, how OCR works, OCR for PDF, scanned document text recognition">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://pdfyre.xyz/what-is-ocr.html">
+<meta property="og:title" content="What is OCR? Complete Beginner's Guide — PDFyre">
+<meta property="og:description" content="Understand Optical Character Recognition — what it is, how it works, and why it matters for scanned PDFs.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<!-- Google AdSense loads dynamically after cookie consent -->
+
+<style>
+:root{--bg:#07080d;--surface:#0d0f18;--card:#131520;--card-hi:#1a1d2e;--border:#1e2133;--border-hi:#2e3350;--fire:#ff6b1f;--fire-2:#ff8c42;--fire-dim:#c24c10;--fire-glow:rgba(255,107,31,.13);--fire-glow2:rgba(255,107,31,.06);--teal:#38d9c0;--green:#3dd68c;--blue:#5b9cf6;--text:#e4e6f0;--text-2:#8890b8;--text-3:#4a5070;--font:'DM Sans',sans-serif;--mono:'DM Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased;line-height:1.7}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 15% 10%,rgba(255,107,31,.05) 0%,transparent 50%),linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:auto,48px 48px,48px 48px;opacity:.45;pointer-events:none;z-index:0}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--border-hi);border-radius:2px}
+header{border-bottom:1px solid var(--border);background:rgba(7,8,13,.88);backdrop-filter:blur(20px);position:sticky;top:0;z-index:100}
+.hdr-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:1100px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:1.05rem;letter-spacing:-.03em;text-decoration:none;color:var(--text)}
+.logo-icon{width:28px;height:28px;background:linear-gradient(145deg,#ff8c42,#ff6b1f,#c24c10);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 2px 10px rgba(255,107,31,.35);flex-shrink:0}
+.logo-wordmark{letter-spacing:-.045em;white-space:nowrap}.yre{color:#ff8c42}
+nav a{font-size:.8rem;color:var(--text-2);padding:5px 10px;border-radius:6px;text-decoration:none;transition:all .13s}
+nav a:hover{color:var(--text);background:var(--card)}
+nav{display:flex;gap:4px}
+.page-wrap{max-width:760px;margin:0 auto;padding:0 22px;position:relative;z-index:1}
+main{padding:48px 0 80px}
+.breadcrumb{font-family:var(--mono);font-size:.65rem;color:var(--text-3);margin-bottom:20px;letter-spacing:.04em}
+.breadcrumb a{color:var(--text-3);text-decoration:none}.breadcrumb a:hover{color:var(--fire-2)}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fire-2);background:var(--fire-glow);border:1px solid rgba(255,107,31,.2);border-radius:5px;padding:4px 10px;margin-bottom:14px}
+h1{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800;letter-spacing:-.04em;line-height:1.15;margin-bottom:14px}
+.lead{font-size:.97rem;color:var(--text-2);line-height:1.75;margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+h2{font-size:1.12rem;font-weight:700;letter-spacing:-.02em;margin:36px 0 12px;display:flex;align-items:center;gap:9px}
+h2::before{content:'';display:block;width:3px;height:1.1em;background:linear-gradient(var(--fire-2),var(--fire));border-radius:2px;flex-shrink:0}
+h3{font-size:.95rem;font-weight:700;margin:20px 0 7px;color:var(--text)}
+p{font-size:.88rem;color:var(--text-2);line-height:1.8;margin-bottom:14px}
+ul,ol{font-size:.88rem;color:var(--text-2);line-height:1.8;padding-left:22px;margin-bottom:14px}
+li{margin-bottom:5px}
+strong{color:var(--text);font-weight:600}
+a{color:var(--fire-2);text-decoration:none}a:hover{text-decoration:underline}
+.callout{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--fire-2);border-radius:0 8px 8px 0;padding:14px 18px;margin:20px 0}
+.callout p{margin-bottom:0;color:var(--text)}
+.fact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:16px 0 24px}
+.fact-card{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:16px;text-align:center}
+.fact-icon{font-size:1.6rem;margin-bottom:7px}
+.fact-title{font-size:.85rem;font-weight:700;margin-bottom:5px}
+.fact-desc{font-size:.76rem;color:var(--text-2);line-height:1.5}
+.cta-box{background:linear-gradient(135deg,var(--fire-glow2),rgba(56,217,192,.05));border:1px solid rgba(255,107,31,.2);border-radius:12px;padding:26px;text-align:center;margin:36px 0}
+.cta-box h3{font-size:1.05rem;font-weight:800;margin-bottom:8px}
+.cta-box p{font-size:.85rem;color:var(--text-2);margin-bottom:18px}
+.btn-fire{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#ff8c42,#ff6b1f,#c24c10);color:#fff;font-weight:700;font-size:.88rem;padding:11px 24px;border-radius:8px;text-decoration:none;box-shadow:0 2px 12px rgba(255,107,31,.3);transition:all .16s}
+.btn-fire:hover{transform:translateY(-1px);box-shadow:0 5px 22px rgba(255,107,31,.42);text-decoration:none}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:18px 0}
+.rel-card{background:linear-gradient(180deg,#1b1e30,#14182a);border:1px solid var(--border-hi);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:border-color .15s,transform .15s,box-shadow .15s}
+.rel-card:hover{border-color:var(--fire-2);transform:translateY(-2px);box-shadow:0 4px 18px rgba(0,0,0,.35);text-decoration:none}
+.rel-icon{font-size:1.4rem;margin-bottom:8px}
+.rel-title{font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:4px}
+.rel-desc{font-size:.74rem;color:var(--text-2);line-height:1.45;margin-bottom:9px}
+.rel-go{font-size:.72rem;font-weight:700;color:var(--fire-2);opacity:.85}
+.rel-go:after{content:" →"}
+.rel-heading{margin-bottom:4px}
+footer{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:.74rem;color:var(--text-3)}
+footer a{color:var(--text-3);text-decoration:none;margin:0 8px}
+footer a:hover{color:var(--text-2)}
+@media(max-width:500px){h1{font-size:1.5rem}.hdr-inner{padding:12px 14px}}
+#cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:10000;background:#14182a;border-top:1px solid #2e3350;padding:14px 18px;font-size:.82rem;color:#e4e6f0;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;box-shadow:0 -4px 18px rgba(0,0,0,.4)}
+#cookie-banner p{margin:0;flex:1 1 260px;line-height:1.45}
+#cookie-banner a{color:#ff8c42;text-decoration:underline}
+#cookie-banner .cb-btns{display:flex;gap:8px}
+#cookie-banner button{cursor:pointer;border:none;border-radius:7px;padding:8px 16px;font-size:.8rem;font-weight:600}
+#cookie-banner .cb-accept{background:#ff6b1f;color:#0d0f18}
+#cookie-banner .cb-decline{background:#1e2133;color:#e4e6f0;border:1px solid #2e3350}</style>
+</head>
+<body>
+<header>
+  <div class="hdr-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">🔥</span><span class="logo-wordmark">PDF<span class="yre">yre</span></span></a>
+    <nav>
+      <a href="index.html">Tools</a>
+      <a href="guides.html">Guides</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<div class="page-wrap">
+<main>
+  <p class="breadcrumb"><a href="index.html">Home</a> / <a href="guides.html">Guides</a> / What is OCR?</p>
+  <span class="hero-tag">📖 Guide</span>
+  <h1>What is OCR? Optical Character Recognition, Explained</h1>
+  <p class="lead">OCR — optical character recognition — is the technology that turns pictures of text into real, selectable text. If you have ever scanned a paper document and wished you could search it, copy a sentence out of it, or edit it, OCR is the tool that makes that possible. It is the engine behind every "make this scanned PDF searchable" feature, including the one built into PDFyre.</p>
+
+  <div class="fact-grid">
+    <div class="fact-card"><div class="fact-icon">🔍</div><div class="fact-title">Finds words</div><div class="fact-desc">Search inside scanned PDFs with Ctrl/Cmd+F</div></div>
+    <div class="fact-card"><div class="fact-icon">✂️</div><div class="fact-title">Copy &amp; paste</div><div class="fact-desc">Select and copy text like a real document</div></div>
+    <div class="fact-card"><div class="fact-icon">📄</div><div class="fact-title">Edit text</div><div class="fact-desc">Reuse text from scans in docs and emails</div></div>
+    <div class="fact-card"><div class="fact-icon">🔒</div><div class="fact-title">Stays private</div><div class="fact-desc">OCR runs on your own device, nothing uploads</div></div>
+  </div>
+
+  <h2>What does OCR actually do?</h2>
+  <p>A scanner or a photo turns a physical page into an <strong>image</strong>. To the computer, that image is just a grid of colored pixels — it has no idea the dark squiggles are letters. OCR reads that image, recognizes the shapes as characters, and rebuilds them as <strong>actual text</strong> with a position on the page.</p>
+  <p>The result is a PDF that has two layers: the original image (so it still looks exactly the same) and an invisible text layer on top (so it can be searched, copied, and indexed). That is why OCR is often called "adding a searchable text layer to a PDF."</p>
+
+  <h2>How does OCR work?</h2>
+  <p>Modern OCR is a combination of image processing and machine learning:</p>
+  <ul>
+    <li><strong>Preprocessing</strong> — the page image is cleaned up: contrast is boosted, grayscale is normalized, and skew is straightened so the text is as readable as possible.</li>
+    <li><strong>Text detection</strong> — the engine finds the lines, words, and individual characters in the image.</li>
+    <li><strong>Recognition</strong> — a trained neural network compares each character shape against millions of examples and decides what letter it most likely is.</li>
+    <li><strong>Reconstruction</strong> — the recognized text is placed back on the page at the exact coordinates, preserving the layout, so the searchable layer lines up with the visible text.</li>
+  </ul>
+
+  <h2>Why can't I search my scanned PDF?</h2>
+  <p>When a PDF is created directly from a computer — like an invoice from accounting software or a downloaded report — the text is already inside the file, and search just works. But a <strong>scanned PDF</strong> is a series of photos. There is no text in it, only pixels. So Ctrl+F finds nothing, copying returns nothing, and search engines cannot index the content. OCR is the fix: it adds the text layer that was never there.</p>
+
+  <h2>What affects OCR accuracy?</h2>
+  <ul>
+    <li><strong>Scan quality</strong> — higher DPI (200–300) and clean, flat pages give far better results than blurry phone photos.</li>
+    <li><strong>Contrast</strong> — crisp dark text on a white background is ideal; faded or colored backgrounds confuse the engine.</li>
+    <li><strong>Language</strong> — recognition works best when you tell the engine which language the document is in.</li>
+    <li><strong>Type</strong> — printed text recognizes well; dense handwriting is much harder and often needs specialist software.</li>
+  </ul>
+
+  <div class="callout">
+    <p>💡 <strong>Quick tip:</strong> scanning at 300 DPI and keeping pages flat and well-lit gives you the biggest accuracy jump. If your file is already low quality, try the "Max Quality" OCR mode.</p>
+  </div>
+
+  <h2>When do I need OCR?</h2>
+  <ul>
+    <li>You have a scanned book, contract, or report you want to search.</li>
+    <li>You need to copy text out of a photo or scan for an email or document.</li>
+    <li>You are applying for jobs, school, or visas and need to turn papers into text.</li>
+    <li>You want Google to actually index the content inside your scanned PDFs.</li>
+  </ul>
+
+  <h2>Try OCR free in your browser</h2>
+  <p>PDFyre runs OCR entirely in your browser using the Tesseract engine. You never upload your documents to a server, there is no account and no software to install, and there is no limit on file size beyond what your own device can handle. An 890-page, 132 MB scanned book has been tested successfully.</p>
+
+  <div class="cta-box">
+    <h3>Make your scanned PDF searchable — free</h3>
+    <p>No uploads. No sign-up. Your files never leave your device.</p>
+    <a href="index.html" class="btn-fire">🔥 Try OCR on PDFyre</a>
+  </div>
+
+  <h2 class="rel-heading">Related Guides</h2>
+  <div class="related-grid">
+    <a href="how-to-make-pdf-searchable.html" class="rel-card">
+      <div class="rel-icon">🔎</div>
+      <div class="rel-title">Make a PDF Searchable</div>
+      <div class="rel-desc">Run OCR so you can Ctrl+F and copy text from a scanned PDF.</div>
+      <div class="rel-go">Read</div>
+    </a>
+    <a href="how-to-compress-pdf.html" class="rel-card">
+      <div class="rel-icon">📦</div>
+      <div class="rel-title">Compress a PDF</div>
+      <div class="rel-desc">Shrink file size without ruining quality — right in your browser.</div>
+      <div class="rel-go">Read</div>
+    </a>
+    <a href="how-to-merge-pdf.html" class="rel-card">
+      <div class="rel-icon">🔀</div>
+      <div class="rel-title">Merge PDF files</div>
+      <div class="rel-desc">Combine several PDFs into a single document in seconds.</div>
+      <div class="rel-go">Read</div>
+    </a>
+    <a href="how-to-split-pdf.html" class="rel-card">
+      <div class="rel-icon">✂️</div>
+      <div class="rel-title">Split a PDF</div>
+      <div class="rel-desc">Pull out specific pages into their own separate PDF files.</div>
+      <div class="rel-go">Read</div>
+    </a>
+  </div>
+</main>
+</div>
+<footer>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="guides.html">Guides</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>© 2026 PDFyre — Free, private, browser-only PDF tools.</p>
+</footer>
+<div id="cookie-banner" role="dialog" aria-label="Cookie consent"><p>PDFyre uses cookies to keep the site working, understand visits, and display ads. You can accept or decline advertising and analytics cookies. <a href="privacy.html">Read the Privacy Policy</a>.</p><div class="cb-btns"><button type="button" class="cb-accept" onclick="setConsent(1)">Accept</button><button type="button" class="cb-decline" onclick="setConsent(0)">Decline</button></div></div>
+<script>
+(function(){var K='pdfyre_consent';
+function update(c){if(!window.gtag)return;gtag('consent','update',{ad_storage:c?'granted':'denied',ad_user_data:c?'granted':'denied',ad_personalization:c?'granted':'denied',analytics_storage:c?'granted':'denied'});}
+window.setConsent=function(c){try{localStorage.setItem(K,c?'1':'0');}catch(e){}update(c);
+if(c){var L=document.getElementById('ads-script');if(!L){L=document.createElement('script');L.id='ads-script';L.async=true;L.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2592371402292335';L.crossOrigin='anonymous';document.head.appendChild(L);}}
+var b=document.getElementById('cookie-banner');if(b)b.style.display='none';};
+try{var v=localStorage.getItem(K);if(v!==null){window.setConsent(v==='1');}}catch(e){}
+})();
+</script>
+</body>
+</html>
